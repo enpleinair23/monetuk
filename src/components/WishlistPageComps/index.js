@@ -83,6 +83,7 @@ function WishlistPageComps({ wishlistPageItems }) {
                                                 </td>
                                                 <td className="py-[30px] text-right">
                                                     <button
+                                                    aria-label="button"
                                                         type="button"
                                                         className="item-remove"
                                                         onClick={() =>

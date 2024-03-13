@@ -38,6 +38,7 @@ function SearchBar({ headerItems, fullscreenSearch, showFullscreenSearch }) {
                                 placeholder="Search"
                             />
                             <button
+                            role="button"
                                 type="submit"
                                 className="text-[20px] absolute top-auto h-[40px] right-[15px] transition-all hover:text-primary"
                             >

@@ -52,6 +52,7 @@ function HeaderRightTwo({ headerItems }) {
                     <div className="flex justify-end">
                         <div className="search-item md:mr-[35px] mr-[20px]">
                             <button
+                            role="button"
                                 type="button"
                                 className="text-2xl"
                                 onClick={showFullscreenSearch}
@@ -80,6 +81,7 @@ function HeaderRightTwo({ headerItems }) {
                         </div>
                         <div className="menu-item">
                             <button
+                            role="button"
                                 type="button"
                                 className="text-2xl hover:text-primary transition-all"
                                 onClick={showOffcanvas}

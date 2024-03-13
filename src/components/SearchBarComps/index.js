@@ -12,6 +12,7 @@ function SearchBarComps({ placeholdertext }) {
                     className="bg-transparent border-0 border-b border-[rgba(0,0,0,.25)] outline-none w-full p-[10px_35px_10px_0] focus-visible:border-primary"
                 />
                 <button
+                role="button"
                     type="submit"
                     className="absolute top-1/2 -translate-y-1/2 right-0 text-2xl"
                 >

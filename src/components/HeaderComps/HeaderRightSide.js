@@ -60,6 +60,7 @@ function HeaderRight({ headerItems }) {
                 </div>
                 <div className="menu-item">
                     <button
+                    role="button"
                         type="button"
                         className="text-2xl hover:text-primary transition-all"
                         onClick={showOffcanvas}

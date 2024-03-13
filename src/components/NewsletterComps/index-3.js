@@ -28,6 +28,7 @@ function NewsletterCompsThree({
                                 required
                             />
                             <button
+                            role="button"
                                 type="submit"
                                 className="light-stroke text-[18px] absolute top-0 right-[15px] h-[40px]"
                             >

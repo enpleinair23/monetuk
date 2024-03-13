@@ -37,7 +37,7 @@ function CartItem({ item }) {
                     <span className="text-[#666666]">${price.toFixed(2)}</span>{' '}
                 </div>
             </div>
-            <button type="button" className="item-remove flex items-start">
+            <button role="button" type="button" className="item-remove flex items-start">
                 <IoCloseOutline
                     onClick={() => removeItemFromCartHandler(item.id)}
                 />

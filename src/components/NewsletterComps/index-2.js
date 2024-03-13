@@ -28,6 +28,7 @@ function NewsletterCompsTwo({
                                 required
                             />
                             <button
+                            role="button"
                                 type="submit"
                                 className="absolute top-0 right-[15px] h-[54px] px-[30px]"
                             >
