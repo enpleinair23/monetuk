@@ -24,14 +24,6 @@ function HomePage({
             <TransparentHeader headerItems={headerItems} />
             <HeroOne heroDefaultItems={heroDefaultItems} />
             <FeaturedProduct featuredProduct={featuredProduct} />
-            <BestSellingProduct
-                products={products}
-                productFilter={productFilter}
-                sectionTitle="Best Selling"
-                productFilterPath="left-sidebar"
-            />
-            <OfferColection offerColection={offerColection} />
-            <LatestBlog blogs={blogs} sectionTitle="Our Blog" />
             <NewsletterComps sectionTitle="Our Newsletter" />
             <FooterComps
                 footerContainer="container"

@@ -30,18 +30,15 @@ function HeaderOne({ headerItems, headerContainer }) {
             className="flex items-center w-full h-[90px] top-0 z-30"
         >
             <div className={headerContainer}>
-                <div className="grid grid-cols-12">
-                    <div className="col-span-4 hidden lm:block">
-                        <SearchBarComps placeholdertext="Search Anything..." />
-                    </div>
-                    <div className="lm:col-span-4 col-span-6">
+                <div className="flex justify-between">
+                    <div className="">
                         <LogoComps
                             headerItems={headerItems}
                             headerLogoCName="flex lm:justify-center"
                             logoPath="/"
                         />
                     </div>
-                    <div className="lm:col-span-4 col-span-6 self-center">
+                    <div className="">
                         <HeaderRight headerItems={headerItems} />
                     </div>
                 </div>
