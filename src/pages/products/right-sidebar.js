@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import ProductRightSideBar from '../../components/Products/ProductRightSideBar';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ProductUtil';
@@ -15,13 +14,6 @@ function ProductLeftSidebarPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Product"
-                item="Home"
-                itemPath="/"
-                activeItem="Product Right Sidebar"
-            />
             <ProductRightSideBar
                 products={products}
                 productFilter={productFilter}

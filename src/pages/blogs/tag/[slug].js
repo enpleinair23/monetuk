@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import BlogWithSidebar from '../../../components/Blogs/BlogWithSidebar';
-import Breadcrumb from '../../../components/Breadcrumb';
 import FooterComps from '../../../components/FooterComps';
 import HeaderOne from '../../../components/HeaderComps';
 import { getBlogTags } from '../../../lib/BlogTags';
@@ -11,13 +10,6 @@ function BlogTagPage({ headerItems, blogs, categories, tags, footerItems }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Blog Sidebar"
-                item="Home"
-                itemPath="/"
-                activeItem="Blog Sidebar"
-            />
             <BlogWithSidebar
                 blogs={blogs}
                 categories={categories}

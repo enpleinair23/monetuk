@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../components/HeaderComps';
-import Breadcrumb from '../components/Breadcrumb';
 import Faq from '../components/FAQ';
 import FooterComps from '../components/FooterComps';
 import { getAllItems } from '../lib/ItemsUtil';
@@ -9,16 +8,9 @@ function FAQPage({ headerItems, faqItems, footerItems }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="FAQ"
-                item="Home"
-                itemPath="/"
-                activeItem="FAQ"
-            />
             <Faq
                 faqItems={faqItems}
-                title="Frequently Question"
+                title="Frequently Asked Questions"
                 desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id erat sagittis"
             />
             <FooterComps

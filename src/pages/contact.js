@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../components/HeaderComps';
-import Breadcrumb from '../components/Breadcrumb';
 import ContactUs from '../components/Contact';
 import FooterComps from '../components/FooterComps';
 import { getAllItems } from '../lib/ItemsUtil';
@@ -9,13 +8,6 @@ function ContactPage({ headerItems, contactItems, footerItems }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Contact"
-                item="Home"
-                itemPath="/"
-                activeItem="Contact"
-            />
             <ContactUs contactItems={contactItems} />
             <FooterComps
                 footerContainer="container"

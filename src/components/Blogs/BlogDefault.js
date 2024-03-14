@@ -36,7 +36,7 @@ function BlogDefault({ blogs }) {
                     )}
                     {noOfElement > blogs.length && (
                         <div className="pt-[80px]">
-                            <span>All item has been loaded!</span>
+                            <span></span>
                         </div>
                     )}
                 </div>

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import BlogList from '../../components/Blogs/BlogList';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ItemsUtil';
@@ -9,13 +8,6 @@ function BlogListPage({ headerItems, blogs, footerItems }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Blog List"
-                item="Home"
-                itemPath="/"
-                activeItem="Blog List"
-            />
             <BlogList blogs={blogs} />
             <FooterComps
                 footerContainer="container"

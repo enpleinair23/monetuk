@@ -2,45 +2,28 @@ export const OffcanvasData = [
     {
         id: 1,
         title: 'Home',
+        link: '/',
         cName: 'has-children',
         submenu: [
             {
                 id: 'home-01',
                 link: '/',
-                text: 'Home V1 - Default',
-                cName: '',
-            },
-            {
-                id: 'home-02',
-                link: '/home-boxed',
-                text: 'Home V2 - Boxed',
-                cName: '',
-            },
-            {
-                id: 'home-03',
-                link: '/home-carousel',
-                text: 'Home V3 - Carousel',
-                cName: '',
-            },
-            {
-                id: 'home-04',
-                link: '/home-categories',
-                text: 'Home V4 - Categories',
-                cName: '',
-            },
-            {
-                id: 'home-05',
-                link: '/home-collection',
-                text: 'Home V5 - Collection',
+                text: 'Home 1',
                 cName: '',
             },
         ],
     },
     {
         id: 2,
-        title: 'Product',
+        title: 'Shop',
         cName: 'has-children',
         submenu: [
+            {
+                id: 'home-01',
+                link: '/products/3-columns',
+                text: 'Home 1',
+                cName: '',
+            },
             {
                 id: 'product-pages',
                 link: '#',
@@ -89,34 +72,6 @@ export const OffcanvasData = [
                     },
                 ],
             },
-            {
-                id: 'product-related',
-                link: '#',
-                text: 'Product Related',
-                cName: 'sub-children',
-                levelTwo: [
-                    {
-                        id: 'cart',
-                        link: '/cart',
-                        text: 'Cart',
-                    },
-                    {
-                        id: 'checkout',
-                        link: '/checkout',
-                        text: 'Checkout',
-                    },
-                    {
-                        id: 'auth',
-                        link: '/auth',
-                        text: 'Auth',
-                    },
-                    {
-                        id: 'wishlist',
-                        link: '/wishlist',
-                        text: 'Wishlist',
-                    },
-                ],
-            },
         ],
     },
     {
@@ -152,31 +107,13 @@ export const OffcanvasData = [
     },
     {
         id: 4,
-        title: 'Blogs',
+        title: 'Blog',
         cName: 'has-children',
         submenu: [
             {
                 id: 'blog-default',
                 link: '/blogs/default',
-                text: 'Blog Default',
-                cName: '',
-            },
-            {
-                id: 'blog-list',
-                link: '/blogs/list',
-                text: 'Blog List',
-                cName: '',
-            },
-            {
-                id: 'blog-masonry',
-                link: '/blogs/masonry',
-                text: 'Blog Masonry',
-                cName: '',
-            },
-            {
-                id: 'blog-sidebar',
-                link: '/blogs/sidebar',
-                text: 'Blog Sidebar',
+                text: 'Blog 1',
                 cName: '',
             },
         ],

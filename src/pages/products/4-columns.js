@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import ProductFourColumns from '../../components/Products/ProductFourColumns';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ProductUtil';
@@ -15,13 +14,6 @@ function ProductFourColumnsPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Product"
-                item="Home"
-                itemPath="/"
-                activeItem="Product 4 columns"
-            />
             <ProductFourColumns
                 products={products}
                 gridTabItems={gridTabItems}

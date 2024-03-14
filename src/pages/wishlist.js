@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../components/HeaderComps';
-import Breadcrumb from '../components/Breadcrumb';
 import WishlistPageComps from '../components/WishlistPageComps';
 import FooterComps from '../components/FooterComps';
 import { getAllItems } from '../lib/ItemsUtil';
@@ -14,13 +13,6 @@ function WishlistPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Wishlist"
-                item="Home"
-                itemPath="/"
-                activeItem="Wishlist"
-            />
             <WishlistPageComps
                 wishlistPageItems={wishlistPageItems}
                 products={products}

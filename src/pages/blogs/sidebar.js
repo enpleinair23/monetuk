@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import BlogWithSidebar from '../../components/Blogs/BlogWithSidebar';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ItemsUtil';
@@ -17,13 +16,6 @@ function BlogSidebarPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Blog Sidebar"
-                item="Home"
-                itemPath="/"
-                activeItem="Blog Sidebar"
-            />
             <BlogWithSidebar
                 blogs={blogs}
                 categories={categories}

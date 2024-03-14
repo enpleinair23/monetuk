@@ -3,33 +3,23 @@ import { getAllItems, getFeaturedItems } from '../lib/ItemsUtil';
 import TransparentHeader from '../components/HeaderComps/TransparentHeader';
 import HeroOne from '../components/Hero';
 import FeaturedProduct from '../components/HomePage/FeaturedProduct';
-import BestSellingProduct from '../components/HomePage/BestSellingProduct';
-import OfferColection from '../components/OfferColection';
-import LatestBlog from '../components/HomePage/LatestBlog';
-import NewsletterComps from '../components/NewsletterComps';
 import FooterComps from '../components/FooterComps';
 
 function HomePage({
     headerItems,
     heroDefaultItems,
     featuredProduct,
-    products,
-    productFilter,
-    offerColection,
-    blogs,
     footerItems,
 }) {
     return (
-        <>
-            <TransparentHeader headerItems={headerItems} />
-            <HeroOne heroDefaultItems={heroDefaultItems} />
-            <FeaturedProduct featuredProduct={featuredProduct} />
-            <NewsletterComps sectionTitle="Our Newsletter" />
+        <div>
+            <TransparentHeader headerItems={headerItems}/>
+            <HeroOne heroDefaultItems={heroDefaultItems}/>
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}
             />
-        </>
+        </div>
     );
 }
 

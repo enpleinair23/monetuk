@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import ProductTabSlider from '../../components/ProductTab/tab-slider';
 import ProductThreeColumns from '../../components/Products/ProductThreeColumns';
 import FooterComps from '../../components/FooterComps';
@@ -17,13 +16,6 @@ function ProductCarouselPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Product"
-                item="Home"
-                itemPath="/"
-                activeItem="Product Carousel"
-            />
             <ProductTabSlider
                 products={products}
                 productTab={productTab}

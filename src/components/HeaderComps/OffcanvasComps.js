@@ -23,63 +23,9 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                         <IoCloseOutline onClick={showOffcanvas} />
                     </button>
                 </div>
-                <div className="offcanvas-setting grid grid-cols-2 pt-[40px]">
-                    <div className="language-widget">
-                        <h3 className="text-[16px] mb-[15px]">
-                            {headerItems[0]?.languageTitle}
-                        </h3>
-                        <ul>
-                            {headerItems[0]?.languageList?.map((items) => (
-                                <li
-                                    className="mb-[10px] last:mb-0"
-                                    key={items.id}
-                                >
-                                    <Link
-                                        href={`${items.path}`}
-                                        className="text-[#999999] font-normal transition-all hover:text-primary block"
-                                    >
-                                        {items.text}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="currency-widget">
-                        <h3 className="text-[16px] mb-[10px]">
-                            {headerItems[0]?.currencyTitle}
-                        </h3>
-                        <ul>
-                            {headerItems[0]?.currencyList?.map((items) => (
-                                <li
-                                    className="mb-[15px] last:mb-0"
-                                    key={items.id}
-                                >
-                                    <Link
-                                        href={items.path}
-                                        className="text-[#999999] font-normal transition-all hover:text-primary block"
-                                    >
-                                        {items.text}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
                 <OffcanvasMenu />
                 <div className="offcanvas-contact-info pt-[60px]">
-                    <h3 className="text-[16px]">
-                        {headerItems[0]?.contactInfoTitle}
-                    </h3>
-                    <p
-                        className="text-[#666666] pt-[20px]"
-                        dangerouslySetInnerHTML={{
-                            __html: headerItems[0]?.contactInfo,
-                        }}
-                    />
                     <div className="offcanvas-social-link flex justify-between items-center pt-[55px]">
-                        <h3 className="text-[16px]">
-                            {headerItems[0]?.socialTitle}
-                        </h3>
                         <ul className="flex">
                             {headerItems[0]?.socialList?.map((item) => {
                                 const Social = FaIcons[item.socialIcon];

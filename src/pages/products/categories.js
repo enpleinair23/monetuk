@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import Breadcrumb from '../../components/Breadcrumb';
 import CategoriesBanner from '../../components/CategoriesBanner';
 import ProductThreeColumns from '../../components/Products/ProductThreeColumns';
 import FooterComps from '../../components/FooterComps';
@@ -17,13 +16,6 @@ function ProductThreeColumnsPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <Breadcrumb
-                breadcrumbContainer="container"
-                title="Product"
-                item="Home"
-                itemPath="/"
-                activeItem="Product Categories"
-            />
             <CategoriesBanner
                 categoryBannerCName="category-banner-area lg:pt-[100px] md:pt-[80px] pt-[50px]"
                 categoryBanner={categoryBanner}

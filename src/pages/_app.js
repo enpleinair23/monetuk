@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>MONET U.K</title>
+                <title>MONÉT U.K</title>
                 <meta
                     name="description"
                     content="Are you looking for an awesome E-commerce React Template? Helendo is a minimal and modern design React ecommerce template. It has been built using the latest version of React JS and Next JS."
