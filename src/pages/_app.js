@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import store from '../store/index';
-
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { ScrollToTop } from '../components/ScrollComps';
