@@ -1,147 +1,11 @@
 import Link from 'next/link';
-import {
-    IoLocationSharp,
-    IoCallSharp,
-    IoArrowForwardOutline,
-} from 'react-icons/io5';
 import * as FaIcons from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 function FooterComps({ footerContainer, footerItems }) {
     return (
         <footer>
-            <div className="footer-top xl:py-[115px] lg:py-[95px] md:py-[75px] py-[45px]">
-                <div className={footerContainer}>
-                    <div className="grid grid-cols-12 md:gap-y-0 gap-y-[30px]">
-                        <div className="md:col-span-4 lm:col-span-6 col-span-12">
-                            <div className="footer-widget">
-                                <h2 className="text-[18px] mb-[15px]">
-                                    {footerItems[0]?.addressTitle}
-                                </h2>
-                                <ul>
-                                    <li className="flex items-center mb-[5px]">
-                                        <IoLocationSharp />
-                                        <span className="ml-[10px]">
-                                            {footerItems[0]?.address}
-                                        </span>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <IoCallSharp />
-                                        <Link
-                                            href={footerItems[0]?.contactNumber}
-                                            className="font-normal hover:text-primary transition-all ml-[10px]"
-                                        >
-                                            {footerItems[0]?.contactNumberText}
-                                        </Link>
-                                    </li>
-                                </ul>
-                                <ul className="flex pt-[35px]">
-                                    {footerItems[0]?.socialList?.map((item) => {
-                                        const Social = FaIcons[item.socialIcon];
-                                        return (
-                                            <li
-                                                className="mr-[25px] last:mr-0"
-                                                key={item.id}
-                                            >
-                                                <Link
-                                                    href={item?.path}
-                                                    className="transition-all hover:text-primary"
-                                                >
-                                                    <Social />
-                                                </Link>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="md:col-span-3 lm:col-span-6 col-span-12">
-                            <div className="footer-widget">
-                                <h2 className="text-[18px] mb-[15px]">
-                                    {footerItems[0]?.infoTitle}
-                                </h2>
-                                <ul>
-                                    {footerItems[0]?.infoList?.map((item) => (
-                                        <li
-                                            className="mb-[5px] last:mb-0"
-                                            key={item.id}
-                                        >
-                                            <Link
-                                                href={item?.path}
-                                                className="font-normal transition-all hover:text-primary"
-                                            >
-                                                {item?.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="md:col-span-2 lm:col-span-6 col-span-12">
-                            <div className="footer-widget">
-                                <h2 className="text-[18px] mb-[15px]">
-                                    {footerItems[0]?.aboutTitle}
-                                </h2>
-                                <ul>
-                                    {footerItems[0]?.aboutList?.map((item) => (
-                                        <li
-                                            className="mb-[5px] last:mb-0"
-                                            key={item.id}
-                                        >
-                                            <Link
-                                                href={item?.path}
-                                                className="font-normal transition-all hover:text-primary"
-                                            >
-                                                {item?.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="md:col-span-3 lm:col-span-6 col-span-12">
-                            <div className="footer-widget">
-                                <h2 className="text-[18px] mb-[15px]">
-                                    {footerItems[0]?.newsletterTitle}
-                                </h2>
-                                <form>
-                                    <div className="input-field relative max-w-[270px]">
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Your email address"
-                                            className="bg-transparent border-0 border-b border-[rgba(0,0,0,.25)] outline-none w-full p-[10px_35px_10px_0] focus-visible:border-primary focus-visible:text-primary"
-                                        />
-                                        <button
-                                        role="button"
-                                            type="submit"
-                                            className="absolute top-1/2 -translate-y-1/2 right-0 text-[20px] text-[#99999] opacity-70"
-                                        >
-                                            <IoArrowForwardOutline />
-                                        </button>
-                                    </div>
-                                </form>
-                                <ul className="flex pt-[50px]">
-                                    {footerItems[0]?.menuList?.map((item) => (
-                                        <li
-                                            className="xl:mr-[30px] mr-[20px] last:mr-0"
-                                            key={item.id}
-                                        >
-                                            <Link
-                                                href={item?.path}
-                                                className="font-normal transition-all hover:text-primary"
-                                            >
-                                                {item?.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="footer-bottom">
+            <div className="footer-bottom xl:py-[25px] lg:py-[25px] md:py-[25px] py-[25px]">
                 <div className={footerContainer}>
                     <div className="grid grid-cols-12 md:gap-y-0 gap-y-[20px] items-center">
                         <div className="md:col-span-4 col-span-12">
@@ -205,7 +69,7 @@ function FooterComps({ footerContainer, footerItems }) {
                 <div className="container">
                     <div className="grid grid-cols-1">
                         <span className="flex justify-center items-center">
-                            © {new Date().getFullYear()} Helendo.
+                            © {new Date().getFullYear()} Monet U.K.
                             <Link
                                 href={footerItems[0]?.copyrightLink}
                                 className="font-normal ml-[5px]"

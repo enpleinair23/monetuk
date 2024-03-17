@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import SearchBarComps from '../SearchBarComps';
 import LogoComps from '../LogoComps';
 import HeaderRight from './HeaderRightSide';
 

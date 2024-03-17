@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import * as FaIcons from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
-import OffcanvasMenu from './OffcanvasMenu';
 
 function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
     return (
@@ -23,7 +22,26 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                         <IoCloseOutline onClick={showOffcanvas} />
                     </button>
                 </div>
-                <OffcanvasMenu />
+                <div className="">
+                <Link href="/" className='hover:text-[#666666]'>
+                Home
+                </Link>
+                <Link href="/products/3-columns" className='hover:text-[#666666]'>
+                Shop
+                </Link>
+                <Link href="/faq" className='hover:text-[#666666]'>
+                FAQ
+                </Link>
+                <Link href="/blogs/default" className='hover:text-[#666666]'>
+                Blog
+                </Link>
+                <Link href="/about" className='hover:text-[#666666]'>
+                About
+                </Link>
+                <Link href="/contact" className='hover:text-[#666666]'>
+                Contact
+                </Link>
+                </div>
                 <div className="offcanvas-contact-info pt-[60px]">
                     <div className="offcanvas-social-link flex justify-between items-center pt-[55px]">
                         <ul className="flex">

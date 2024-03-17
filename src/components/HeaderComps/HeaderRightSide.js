@@ -6,9 +6,7 @@ import {
     IoMenuOutline,
     IoBagHandleOutline,
     IoHeartOutline,
-    IoPersonOutline,
 } from 'react-icons/io5';
-
 import Cart from '../Cart';
 import OffcanvasComps from './OffcanvasComps';
 
@@ -31,14 +29,6 @@ function HeaderRight({ headerItems }) {
     return (
         <>
             <div className="flex justify-end">
-                <div className="user-item md:mr-[35px] sm:mr-[25px] mr-[15px]">
-                    <Link
-                        href="/auth"
-                        className="text-2xl hover:text-primary transition-all"
-                    >
-                        <IoPersonOutline />
-                    </Link>
-                </div>
                 <div className="wishlist-item md:mr-[35px] sm:mr-[25px] mr-[15px]">
                     <Link
                         href="/wishlist"

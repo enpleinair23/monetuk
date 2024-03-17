@@ -59,16 +59,6 @@ homeBoxedMenu:
                         submenuTitle: 'Home V3 – Carousel',
                         submenuPath: '/home-carousel',
                     },
-                    {
-                        id: 'home-categories',
-                        submenuTitle: 'Home V4 – Categories',
-                        submenuPath: '/home-categories',
-                    },
-                    {
-                        id: 'home-collection',
-                        submenuTitle: 'Home V5 – Collection',
-                        submenuPath: '/home-collection',
-                    },
                 ],
         },
         {
@@ -104,33 +94,6 @@ homeBoxedMenu:
                                     megamenuTitle: 'Product 6 Columns',
                                     megamenuPath: '/products/6-columns',
                                 },
-                                {
-                                    id: 'product-categories',
-                                    megamenuTitle: 'Product Categories',
-                                    megamenuPath: '/products/categories',
-                                },
-                            ],
-                    },
-                    {
-                        id: 'group-two',
-                        groupName: 'Group Two',
-                        groupItems:
-                            [
-                                {
-                                    id: 'product-carousel',
-                                    megamenuTitle: 'Product Carousel',
-                                    megamenuPath: '/products/carousel',
-                                },
-                                {
-                                    id: 'product-left-sidebar',
-                                    megamenuTitle: 'Product Left Sidebar',
-                                    megamenuPath: '/products/left-sidebar',
-                                },
-                                {
-                                    id: 'product-right-sidebar',
-                                    megamenuTitle: 'Product Right Sidebar',
-                                    megamenuPath: '/products/right-sidebar',
-                                },
                             ],
                     },
                     {
@@ -147,11 +110,6 @@ homeBoxedMenu:
                                     id: 'checkout',
                                     megamenuTitle: 'Checkout',
                                     megamenuPath: '/checkout',
-                                },
-                                {
-                                    id: 'auth',
-                                    megamenuTitle: 'Auth',
-                                    megamenuPath: '/auth',
                                 },
                                 {
                                     id: 'wishlist',
@@ -183,7 +141,7 @@ homeBoxedMenu:
                     },
                     {
                         id: 'faq',
-                        submenuTitle: 'FAQ Page',
+                        submenuTitle: 'FAQ',
                         submenuPath: '/faq',
                     },
                     {
@@ -192,51 +150,6 @@ homeBoxedMenu:
                         submenuPath: '/coming-soon',
                     },
                 ],
-        },
-        {
-            id: 4,
-            title: 'Blogs',
-            path: '/blogs/sidebar',
-            holderCName: 'header-submenu-holder group',
-            submenuCName: 'header-submenu',
-            headerSubmenu:
-                [
-                    {
-                        id: 'default',
-                        submenuTitle: 'Blog Default',
-                        submenuPath: '/blogs/default',
-                    },
-                    {
-                        id: 'list',
-                        submenuTitle: 'Blog List',
-                        submenuPath: '/blogs/list',
-                    },
-                    {
-                        id: 'masonry',
-                        submenuTitle: 'Blog Masonry',
-                        submenuPath: '/blogs/masonry',
-                    },
-                    {
-                        id: 'sidebar',
-                        submenuTitle: 'Blog Sidebar',
-                        submenuPath: '/blogs/sidebar',
-                    },
-                ],
-        },
-    ]
-categoryList:
-    [
-        { id: 1, title: 'All' },
-        { id: 2, title: 'Accessories' },
-        { id: 3, title: 'Decoration' },
-        { id: 4, title: 'Furniture' },
-    ]
-headerNumberInfo:
-    [
-        {
-            id: 1,
-            numberUrl: 'tel:+8(268)65458768',
-            numberInText: '+8 (268) 654 - 587- 68',
         },
     ]
 ---

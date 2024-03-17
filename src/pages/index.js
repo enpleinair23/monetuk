@@ -2,13 +2,11 @@ import PropTypes from 'prop-types';
 import { getAllItems, getFeaturedItems } from '../lib/ItemsUtil';
 import TransparentHeader from '../components/HeaderComps/TransparentHeader';
 import HeroOne from '../components/Hero';
-import FeaturedProduct from '../components/HomePage/FeaturedProduct';
 import FooterComps from '../components/FooterComps';
 
 function HomePage({
     headerItems,
     heroDefaultItems,
-    featuredProduct,
     footerItems,
 }) {
     return (
