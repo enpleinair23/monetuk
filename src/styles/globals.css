@@ -1,32 +1,7 @@
-/*-----------------------------------------------------------------------------------
-    Template Name: Helendo - React eCommerce Template
-    Version: 1.0
------------------------------------------------------------------------------------
-    
-    INDEX
-    ===================
-	
-    - default
-    - helper
-    - header
-    - hero
-    - product
-    - faq
-    - pagination
-    - tabs
-    - swiper
-    - newarrrival
-    - cart Page
-
------------------------------------------------------------------------------------*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*----------------------------------------*/
-/*  - default
-/*----------------------------------------*/
 @layer base {
     body {
         @apply font-roboto text-base leading-7 font-normal relative;

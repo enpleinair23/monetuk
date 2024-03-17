@@ -3,13 +3,11 @@ addressTitle: 'Address'
 address: 'Helendo, Chicago, USA 2023'
 contactNumber: 'tel:846677028028'
 contactNumberText: '+846677028028'
-socialTitle: 'Follow Us On Social'
+socialTitle: ''
 socialList:
     [
         {
-            id: 01,
-            socialIcon: 'FaFacebookF',
-            path: 'https://www.facebook.com/',
+          id: 01, socialIcon: 'FaFacebookF', path: 'https://www.facebook.com/',
         },
         { id: 02, socialIcon: 'FaTwitter', path: 'https://twitter.com/' },
         { id: 03, socialIcon: 'FaTumblr', path: 'https://www.tumblr.com/' },

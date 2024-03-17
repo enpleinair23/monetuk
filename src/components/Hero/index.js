@@ -40,7 +40,7 @@ function HeroOne({ heroDefaultItems, settings }) {
 
     return (
         <div className="hero-area">
-            <div className="container-fluid px-[15px] mt-[15px]">
+            <div className="container-fluid">
                 <SwiperComps
                     sliderCName="pagination-bg-primary"
                     settings={settings}
@@ -191,7 +191,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                             }}
                                         >
                                             <Link
-                                                href="/products/left-sidebar"
+                                                href="/products/3-columns"
                                                 className={secondaryButton}
                                             >
                                                 Shop Now
