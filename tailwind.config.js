@@ -7,9 +7,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#dcb14a',
-                secondary: '#000000',
-                heading: '#111111',
+                primary: '#090c08',
+                secondary: '#c0c0c0',
+                heading: '#ebebeb',
             },
             backgroundImage: {
                 'offer-colection':

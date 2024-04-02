@@ -26,7 +26,7 @@ function Cart({ minicart, showMiniCart }) {
             >
                 <div className="minicart-top ml-[-8px]">
                     <IoCloseOutline
-                        className="text-[#212121] text-[32px] cursor-pointer"
+                        className="text-secondary text-[32px] cursor-pointer"
                         onClick={showMiniCart}
                     />
                 </div>

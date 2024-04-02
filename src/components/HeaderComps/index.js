@@ -30,14 +30,14 @@ function HeaderOne({ headerItems, headerContainer }) {
         >
             <div className={headerContainer}>
                 <div className="flex justify-between">
-                    <div className="">
+                    <div>
                         <LogoComps
                             headerItems={headerItems}
                             headerLogoCName="flex lm:justify-center"
                             logoPath="/"
                         />
                     </div>
-                    <div className="">
+                    <div>
                         <HeaderRight headerItems={headerItems} />
                     </div>
                 </div>

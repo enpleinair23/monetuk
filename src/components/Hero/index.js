@@ -36,7 +36,7 @@ function HeroOne({ heroDefaultItems, settings }) {
 
     // Tailwind Related Stuff
     const secondaryButton =
-        'inline-flex items-center bg-secondary text-white leading-[38px] text-[15px] h-[38px] px-5';
+        'inline-flex items-center bg-primary text-white leading-[38px] text-[20px] h-[38px] px-5';
 
     return (
         <div className="hero-area">
@@ -55,7 +55,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                 <div className="container">
                                     <div className="hero-content">
                                         <motion.span
-                                            className="text-primary font-medium block mb-[5px]"
+                                            className="text-primary font-medium text-[40px] block mb-[5px]"
                                             dangerouslySetInnerHTML={{
                                                 __html: heroDefaultItem.subtitle,
                                             }}
@@ -85,41 +85,6 @@ function HeroOne({ heroDefaultItems, settings }) {
                                                     transition: {
                                                         duration: 1,
                                                         delay: 0.3,
-                                                    },
-                                                },
-                                            }}
-                                        />
-                                        <motion.h2
-                                            className="relative md:text-[60px] text-[34px] leading-[1.1] pb-[15px] mb-[30px] after:bg-primary after:absolute after:min-h-[4px] after:min-w-[70px] after:max-h-[4px] after:max-w-[70px] after:bottom-0 after:left-0"
-                                            dangerouslySetInnerHTML={{
-                                                __html: heroDefaultItem.title,
-                                            }}
-                                            initial="hidden"
-                                            animate={
-                                                idx === activeIdx
-                                                    ? 'visible'
-                                                    : 'exit'
-                                            }
-                                            exit="exit"
-                                            variants={{
-                                                hidden: {
-                                                    y: '100%',
-                                                    opacity: 0,
-                                                },
-                                                visible: {
-                                                    y: '0',
-                                                    opacity: 1,
-                                                    transition: {
-                                                        duration: 1,
-                                                        delay: 0.6,
-                                                    },
-                                                },
-                                                exit: {
-                                                    y: '100%',
-                                                    opacity: 0,
-                                                    transition: {
-                                                        duration: 1,
-                                                        delay: 0.6,
                                                     },
                                                 },
                                             }}
@@ -159,7 +124,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                             }}
                                         />
                                         <motion.div
-                                            className="mt-[30px]"
+                                            className="mt-[40px]"
                                             initial="hidden"
                                             animate={
                                                 idx === activeIdx

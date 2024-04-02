@@ -8,7 +8,7 @@ function LogoComps({ headerItems, headerLogoCName, logoPath }) {
                 <img
                     src={headerItems[0]?.headerLogo[0]?.darkLogo}
                     alt={headerItems[0]?.headerLogo[0]?.darkLogoAlt}
-                    width={120}
+                    width={150}
                     height={30}
                 />
             </Link>

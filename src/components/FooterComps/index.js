@@ -17,7 +17,7 @@ function FooterComps({ footerContainer, footerItems }) {
                                     >
                                         <Link
                                             href={item?.path}
-                                            className="font-normal transition-all hover:text-primary"
+                                            className="font-normal transition-all hover:text-[#666666]"
                                         >
                                             {item?.title}
                                         </Link>
@@ -31,7 +31,7 @@ function FooterComps({ footerContainer, footerItems }) {
                                     <img
                                         src={footerItems[0]?.footerLogo}
                                         alt={footerItems[0]?.footerLogoAlt}
-                                        width={120}
+                                        width={150}
                                         height={30}
                                     />
                                 </Link>
@@ -52,7 +52,7 @@ function FooterComps({ footerContainer, footerItems }) {
                                             >
                                                 <Link
                                                     href={item?.path}
-                                                    className="transition-all hover:text-primary"
+                                                    className="transition-all hover:text-[#666666]"
                                                 >
                                                     <Social />
                                                 </Link>
@@ -65,7 +65,7 @@ function FooterComps({ footerContainer, footerItems }) {
                     </div>
                 </div>
             </div>
-            <div className="footer-copyright pt-[35px] pb-[25px]">
+            <div className="footer-copyright pt-[5px] pb-[20px]">
                 <div className="container">
                     <div className="grid grid-cols-1">
                         <span className="flex justify-center items-center">

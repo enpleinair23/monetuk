@@ -16,21 +16,20 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                 <div className="offcanvas-top flex">
                     <button
                         type="button"
-                        className="offcanvas-close-btn text-[32px]"
+                        className="offcanvas-close-btn text-[32px] hover:text-[#666666]"
                         aria-label="Right Align"
                     >
                         <IoCloseOutline onClick={showOffcanvas} />
                     </button>
                 </div>
-                <div className="">
+                <div className='flex flex-col gap-8'>
+
+                <div className="flex flex-col">
                 <Link href="/" className='hover:text-[#666666]'>
                 Home
                 </Link>
                 <Link href="/products/3-columns" className='hover:text-[#666666]'>
                 Shop
-                </Link>
-                <Link href="/faq" className='hover:text-[#666666]'>
-                FAQ
                 </Link>
                 <Link href="/blogs/default" className='hover:text-[#666666]'>
                 Blog
@@ -42,8 +41,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                 Contact
                 </Link>
                 </div>
-                <div className="offcanvas-contact-info pt-[60px]">
-                    <div className="offcanvas-social-link flex justify-between items-center pt-[55px]">
+                    <div className="offcanvas-social-link flex justify-between items-center">
                         <ul className="flex">
                             {headerItems[0]?.socialList?.map((item) => {
                                 const Social = FaIcons[item.socialIcon];
@@ -54,7 +52,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                                     >
                                         <Link
                                             href={item?.path}
-                                            className="transition-all hover:text-primary"
+                                            className="transition-all hover:text-[#666666]"
                                         >
                                             <Social />
                                         </Link>
@@ -63,7 +61,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                             })}
                         </ul>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
     );

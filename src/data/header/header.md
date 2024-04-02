@@ -7,32 +7,16 @@ headerLogo:
             darkLogoAlt: 'Header Logo',
         },
     ]
-languageTitle: 'Language'
-languageList:
-    [
-        { id: language-01, text: 'English', path: '/' },
-        { id: language-02, text: 'French', path: '/' },
-        { id: language-03, text: 'Arabric', path: '/' },
-    ]
-currencyTitle: 'Currency'
-currencyList:
-    [
-        { id: currency-01, text: 'USD - US Dollar', path: '/' },
-        { id: currency-02, text: 'Euro', path: '/' },
-        { id: currency-03, text: 'Pound', path: '/' },
-    ]
-contactInfoTitle: 'Contact Us'
-contactInfo: '69 Halsey St, Ny 10002, New York, United States <br/> support.center@helendo.co <br/> (0091) 8547 632521'
-socialTitle: 'Follow US On Socials'
+socialTitle: ''
 socialList:
     [
         {
             id: 01,
-            socialIcon: 'FaFacebookF',
+            socialIcon: 'FaInstagram',
             path: 'https://www.facebook.com/',
         },
         { id: 02, socialIcon: 'FaTwitter', path: 'https://twitter.com/' },
-        { id: 03, socialIcon: 'FaTumblr', path: 'https://www.tumblr.com/' },
+        { id: 03, socialIcon: 'FaYoutube', path: 'https://www.tumblr.com/' },
     ]
 homeBoxedMenu:
     [

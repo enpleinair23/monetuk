@@ -165,14 +165,6 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                 </Link>
                             )}
                         </div>
-                        <button
-                        role="button"
-                            onClick={addToWishlistHandler}
-                            type="button"
-                            className={`${addActionButton} group-hover:delay-[.3s]`}
-                        >
-                            <IoHeartOutline />
-                        </button>
                     </div>
                 </div>
                 <div className="product-content text-center">

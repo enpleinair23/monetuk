@@ -1,18 +1,16 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import {
     IoMenuOutline,
     IoBagHandleOutline,
-    IoHeartOutline,
 } from 'react-icons/io5';
 import Cart from '../Cart';
 import OffcanvasComps from './OffcanvasComps';
 
 // Tailwind Related Stuff
 const badge =
-    'bg-primary text-[12px] text-center absolute bottom-[-10px] right-[-10px] h-[20px] leading-[20px] rounded-[20px] px-[6px] transition-all group-hover:text-white';
+    'bg-[#ebebeb] text-[12px] text-center absolute bottom-[-10px] right-[-10px] h-[20px] leading-[20px] rounded-[20px] px-[6px] transition-all group-hover:text-white';
 
 function HeaderRight({ headerItems }) {
     const [offcanvas, setOffcanvas] = useState(false);
@@ -22,26 +20,14 @@ function HeaderRight({ headerItems }) {
     const showMiniCart = () => setMiniCart(!minicart);
 
     const cartQuantity = useSelector((state) => state.cart.totalQuantity);
-    const wishlistQuantity = useSelector(
-        (state) => state.wishlist.totalQuantity
-    );
 
     return (
         <>
             <div className="flex justify-end">
-                <div className="wishlist-item md:mr-[35px] sm:mr-[25px] mr-[15px]">
-                    <Link
-                        href="/wishlist"
-                        className="block text-2xl relative group hover:text-primary transition-all"
-                    >
-                        <IoHeartOutline />
-                        <span className={badge}>{wishlistQuantity}</span>
-                    </Link>
-                </div>
                 <div className="minicart-item md:mr-[35px] sm:mr-[25px] mr-[15px]">
                     <button
                         type="button"
-                        className="text-2xl relative group hover:text-primary transition-all"
+                        className="text-2xl relative group hover:text-[#a9aaa9] transition-all"
                         onClick={showMiniCart}
                     >
                         <IoBagHandleOutline />
@@ -52,7 +38,7 @@ function HeaderRight({ headerItems }) {
                     <button
                     role="button"
                         type="button"
-                        className="text-2xl hover:text-primary transition-all"
+                        className="text-2xl hover:text-[#a9aaa9] transition-all"
                         onClick={showOffcanvas}
                     >
                         <IoMenuOutline />
