@@ -10,7 +10,7 @@ function BlogDefault({ blogs }) {
         setNoOfElement(noOfElement + noOfElement);
     };
     return (
-        <div className="blog border-b border-[#ededed] xl:py-[120px] lg:py-[100px] md:py-[80px] py-[50px]">
+        <div className="blog border-b border-[#ededed]">
             <div className="container">
                 <div className="grid grid-cols-12 gap-x-[25px] gap-y-[50px]">
                     {blogSlice?.map((blog) => (

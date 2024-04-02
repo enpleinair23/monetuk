@@ -5,7 +5,7 @@ import VideoModal from '../VideoModal';
 
 function AboutUs({ aboutItems }) {
     return (
-        <div className="about border-b border-[#ededed] lg:py-[90px] md:py-[80px] py-[50px]">
+        <div className="about border-b border-[#ededed]">
             <div className="video-banner">
                 <div className="container">
                     <div className="blog-img relative flex overflow-hidden after:transition-all after:duration-500 after:bg-[rgba(0,0,0,.4)] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-0 hover:after:opacity-100 group">

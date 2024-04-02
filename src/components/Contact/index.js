@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import * as IoIcon from 'react-icons/io5';
 import Link from 'next/link';
-import GoogleMap from '../GoogleMap';
 
 function ContactUs({ contactItems }) {
     const singleField = `flex w-full`;
@@ -10,51 +9,12 @@ function ContactUs({ contactItems }) {
     const secondaryButton =
         'flex bg-secondary text-white leading-[38px] text-[15px] h-[40px] px-[32px]';
     return (
-        <>
-            <div className="contact-info">
-                <div className="container border-b border-[#ededed]">
-                    <div className="grid grid-cols-12 max-md:gap-y-[30px] my-[60px]">
-                        {contactItems[0]?.singleContactInfo?.map((items) => {
-                            const InfoIcon = IoIcon[items.infoIcon];
-                            return (
-                                <div
-                                    className="lg:col-span-3 md:col-span-4 lm:col-span-6 col-span-12"
-                                    key={items.id}
-                                >
-                                    <div className="single-contact-info">
-                                        <div className="flex">
-                                            <span className="icon text-[36px]">
-                                                <InfoIcon />
-                                            </span>
-                                            <div className="content flex flex-col ml-[26px]">
-                                                <h2 className="text-[18px] mb-[10px]">
-                                                    {items.title}
-                                                </h2>
-                                                <p
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: items.desc,
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </div>
-            <div className="contact pt-[65px] xl:pb-[120px] lg:pb-[100px] md:pb-[80px] pb-[50px]">
+        <div className='grid grid-cols-2 px-8 pb-20'>
+            <div className="contact">
                 <div className="container">
-                    <div className="grid grid-cols-12 max-lm:gap-y-[30px]">
-                        <div className="md:col-span-7 col-span-12 max-lm:order-2">
+                    <div className="max-lm:gap-y-[30px]">
+                        <div className="max-lm:order-2">
                             <div className="contact-form-wrap">
-                                <h2 className="text-[24px] mb-[10px]">
-                                    {contactItems[0]?.formTitle}
-                                </h2>
-                                <p className="mb-[30px]">
-                                    {contactItems[0]?.formDesc}
-                                </p>
                                 <form>
                                     <div className="group-field flex mb-[20px]">
                                         <div
@@ -102,53 +62,42 @@ function ContactUs({ contactItems }) {
                                 </form>
                             </div>
                         </div>
-                        <div className="md:col-span-5 col-span-12 lg:pl-[120px] md:pl-[30px] max-lm:order-1">
-                            <div className="contact-info">
-                                <h2 className="text-[24px] mb-[10px]">
-                                    {contactItems[0]?.infoTitle}
-                                </h2>
-                                <p>{contactItems[0]?.infoDesc}</p>
-                                <p
-                                    className="mt-[25px]"
-                                    dangerouslySetInnerHTML={{
-                                        __html: contactItems[0]?.contactAddress,
-                                    }}
-                                />
-                                <div className="social-link flex items-center pt-[60px]">
-                                    <h2 className="text-[16px] font-normal lg:pr-[65px] pr-[45px]">
-                                        {contactItems[0]?.socialTitle}
-                                    </h2>
-                                    <ul className="flex">
-                                        {contactItems[0]?.socialList?.map(
-                                            (items) => {
-                                                const Social =
-                                                    IoIcon[items.socialIcon];
-                                                return (
-                                                    <li
-                                                        className="mr-[15px] last:mr-0"
-                                                        key={items.id}
-                                                    >
-                                                        <Link
-                                                            href={items?.path}
-                                                            className="transition-all hover:text-primary"
-                                                        >
-                                                            <Social />
-                                                        </Link>
-                                                    </li>
-                                                );
-                                            }
-                                        )}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div className="google-map">
-                <GoogleMap />
-            </div>
-        </>
+
+                <div className="container flex justify-center">
+                    <div className=" max-md:gap-y-[30px]">
+                        {contactItems[0]?.singleContactInfo?.map((items) => {
+                            const InfoIcon = IoIcon[items.infoIcon];
+                            return (
+                                <div
+                                    className=""
+                                    key={items.id}
+                                >
+                                    <div className="single-contact-info">
+                                        <div className="flex">
+                                            <span className="icon text-[36px]">
+                                                <InfoIcon />
+                                            </span>
+                                            <div className="content flex flex-col ml-[26px]">
+                                                <h2 className="text-[18px] mb-[10px]">
+                                                    {items.title}
+                                                </h2>
+                                                <p
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: items.desc,
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+        </div>
     );
 }
 
