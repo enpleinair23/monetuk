@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import * as IoIcon from 'react-icons/io5';
-import Link from 'next/link';
 
 function ContactUs({ contactItems }) {
     const singleField = `flex w-full`;
