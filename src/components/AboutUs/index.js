@@ -60,17 +60,6 @@ function AboutUs({ aboutItems }) {
                             </h2>
                             <p>{aboutItems[0]?.perfectionDesc}</p>
                         </div>
-                        <div className="lm:col-span-5 col-span-12">
-                            <ProgressBar
-                                title="Creativity"
-                                progressText="82%"
-                            />
-                            <ProgressBar
-                                title="Advertising"
-                                progressText="82%"
-                            />
-                            <ProgressBar title="Design" progressText="70%" />
-                        </div>
                     </div>
                 </div>
             </div>
@@ -119,32 +108,6 @@ function AboutUs({ aboutItems }) {
                                     alt={aboutItems[0]?.aboutBannerAlt}
                                 />
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="address pt-[60px]">
-                <div className="container">
-                    <div className="grid grid-cols-12 gap-x-[30px] max-sm:gap-y-[30px]">
-                        <div className="lm:col-span-7 col-span-12">
-                            <h2 className="text-[30px]">
-                                {aboutItems[0]?.addressTitleOne}
-                            </h2>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: aboutItems[0]?.addressDescOne,
-                                }}
-                            />
-                        </div>
-                        <div className="lm:col-span-5 col-span-12">
-                            <h2 className="text-[30px]">
-                                {aboutItems[0]?.addressTitleTwo}
-                            </h2>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: aboutItems[0]?.addressDescTwo,
-                                }}
-                            />
                         </div>
                     </div>
                 </div>

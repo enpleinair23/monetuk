@@ -4,8 +4,8 @@ singleContactInfo:
         {
             id: 01,
             infoIcon: 'IoStopwatchOutline',
-            title: 'Open houses',
-            desc: 'Mon – Fri : 8:30 – 18:00  <br/> Sat – Sun : 9:00 – 17:00',
+            title: 'Opening Times',
+            desc: 'Mon – Fri : 9:00 – 18:00  <br/> Sat : 9:00 – 17:00',
         },
         {
             id: 02,
@@ -17,13 +17,13 @@ singleContactInfo:
             id: 03,
             infoIcon: 'IoMailOpenOutline',
             title: 'Our email',
-            desc: 'office@helendo.com  <br/> Info@helendo.com',
+            desc: 'contact@monetuk.com',
         },
         {
             id: 04,
             infoIcon: 'IoLocationOutline',
             title: 'Our location',
-            desc: '1102 Helen Estates, Guys  <br/> Store, San Diego, USA.',
+            desc: 'North Street, Bedminster,  <br/> Bristol, United Kingdom.',
         },
     ]
 formTitle: 'Get in touch'

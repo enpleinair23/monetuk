@@ -17,8 +17,8 @@ socialMediaList:
     ]
 menuList:
     [
-        { id: 01, title: 'Term & Conditions', path: '/about' },
-        { id: 02, title: 'Privacy Policy', path: '/about' },
+        { id: 01, title: 'Term & Conditions', path: '/termsconditions' },
+        { id: 02, title: 'Privacy Policy', path: '/privacypolicy' },
         { id: 03, title: 'Return Policy', path: '/contact' },
     ]
 footerLogo: '/images/logo/dark-logo.png'

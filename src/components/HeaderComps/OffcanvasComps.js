@@ -22,9 +22,8 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                         <IoCloseOutline onClick={showOffcanvas} />
                     </button>
                 </div>
-                <div className='flex flex-col gap-8'>
-
-                <div className="flex flex-col">
+                <div className='pt-10'>
+                <div className="flex flex-col gap-2">
                 <Link href="/" className='hover:text-[#666666]'>
                 Home
                 </Link>
@@ -41,7 +40,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                 Contact
                 </Link>
                 </div>
-                    <div className="offcanvas-social-link flex justify-between items-center">
+                    <div className="offcanvas-social-link flex justify-between items-center pt-20">
                         <ul className="flex">
                             {headerItems[0]?.socialList?.map((item) => {
                                 const Social = FaIcons[item.socialIcon];
