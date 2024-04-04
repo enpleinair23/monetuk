@@ -107,27 +107,11 @@ function ProductThreeColumns({
     };
 
     return (
-        <div className="product border-b border-[#ededed] xl:py-[80px] lg:py-[60px] md:py-[40px] py-[20px]">
+        <div className="product border-b border-[#ededed] py-[20px]">
             <div className="container">
                 <div className="grid grid-cols-12 lg:gap-x-[25px]">
                     <div className="col-span-12">
-                        <ProductActiveFilter />
-                        <ProductToolBars
-                            totalProductNumber={filteredProduct.length}
-                            startItemNumber={
-                                (currentPage - 1) * itemPerPage + 1
-                            }
-                            endItemNumber={
-                                filteredProduct.length >
-                                currentPage * itemPerPage
-                                    ? currentPage * itemPerPage
-                                    : filteredProduct.length
-                            }
-                            productTab={productTab}
-                            tabState={tabState}
-                            setTabState={setTabState}
-                            gridTabItems={gridTabItems}
-                        />
+
                         <div
                             className={
                                 tabState === 1
