@@ -11,7 +11,6 @@ import {
 } from 'redux-persist';
 import filterSlice from './product-filter/filter-slice';
 import cartSlice from './cart/cart-slice';
-import wishlistSlice from './wishlist/wishlist-slice';
 
 const persistConfig = {
     key: 'root',
@@ -21,7 +20,6 @@ const persistConfig = {
 const reducer = combineReducers({
     cart: cartSlice.reducer,
     filter: filterSlice.reducer,
-    wishlist: wishlistSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);
