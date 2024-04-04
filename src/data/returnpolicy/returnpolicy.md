@@ -1,10 +1,10 @@
 ---
 TitleOne: 'Returns Eligibility'
-DescriptionOne: 'We accept returns for unworn, unwashed, and undamaged products within [number of days] days of the original purchase date.
+DescriptionOne: 'We accept returns for unworn, unwashed, and undamaged products within 14 days of the original purchase date.
 To be eligible for a return, the product must be in its original condition, with all tags attached and in its original packaging.'
 
 TitleTwo: 'Initiating a Return'
-DescriptionTwo: 'To initiate a return, please contact our customer service team at [Customer Service Email/Phone Number] to request a Return Authorization (RA) number.
+DescriptionTwo: 'To initiate a return, please contact our customer service team at contact@monetuk.com to request a Return Authorization (RA) number.
 Clearly mark the RA number on the outside of the package when returning the item.'
 
 TitleThree: 'Return Shipping'
@@ -24,7 +24,7 @@ DescriptionSix: 'If you receive a damaged or defective product, please contact u
 We will replace the item at no additional cost to you or provide a full refund, including shipping charges.'
 
 TitleSeven: 'Contact Information'
-DescriptionSeven: 'If you have any questions or concerns about our return policy, please contact our customer service team at [Customer Service Email/Phone Number].'
+DescriptionSeven: 'If you have any questions or concerns about our return policy, please contact our customer service team at contact@monetuk.com.'
 
 DescriptionEight: 'By initiating a return, you acknowledge that you have read, understood, and agree to abide by the terms outlined in this Return Policy. We reserve the right to refuse any returns that do not meet the eligibility criteria stated above.'
 ---
