@@ -11,7 +11,7 @@ singleContactInfo:
             id: 02,
             infoIcon: 'IoCallOutline',
             title: 'Phone number',
-            desc: '(504) 586 256 23  <br/> (306) 574 326 56',
+            desc: '(504) 586 256 23',
         },
         {
             id: 03,

@@ -99,19 +99,19 @@ function MainContent({ product }) {
                     </div>
                     <div className="lg:col-span-6 col-span-12">
                         <div className="product-detail-content">
-                            <h3 className="mb-[10px]">{product?.title}</h3>
+                            <h3 className="mb-[10px] text-primary">{product?.title}</h3>
                             {price && !discountPrice && (
                                 <span className="product-price text-[30px] leading-[42px] text-[#999999] mb-[25px]">
-                                    ${price.toFixed(2)}
+                                    £{price.toFixed(2)}
                                 </span>
                             )}
                             {price && discountPrice && (
                                 <div className="product-price-wrap flex mb-[10px]">
                                     <span className="product-price text-[30px] leading-[42px] text-[#999999] block">
-                                        ${price.toFixed(2)}
+                                        £{price.toFixed(2)}
                                     </span>
                                     <span className="product-price text-[30px] leading-[42px] text-[#999999] block relative before:content-['-'] before:mx-[10px]">
-                                        ${discountPrice.toFixed(2)}
+                                        £{discountPrice.toFixed(2)}
                                     </span>
                                 </div>
                             )}
@@ -182,21 +182,13 @@ function MainContent({ product }) {
                                         className={`${addtoCartBtn} ${
                                             soldOutSticker
                                                 ? `pointer-events-none`
-                                                : ''
+                                                : 'hover:bg-[#666666]'
                                         } mr-[15px]`}
                                         onClick={addToCartHandler}
                                     >
                                         Add to cart
                                     </button>
                                 </div>
-                                <button
-                                role="button"
-                                    onClick={addToWishlistHandler}
-                                    type="button"
-                                    className={`${wishlistBtn}`}
-                                >
-                                    <IoHeartOutline />
-                                </button>
                             </div>
                             <div className="other-info">
                                 <div className="sku-wrap font-medium">
@@ -209,17 +201,6 @@ function MainContent({ product }) {
                                     <span>Categories:</span>
                                     <span className="text-[#666666] ml-[5px]">
                                         {product?.category}
-                                    </span>
-                                </div>
-                                <div className="category-wrap font-medium">
-                                    <span>Tags:</span>
-                                    <span className="text-[#666666] ml-[5px]">
-                                        {product?.tag}
-                                    </span>
-                                </div>
-                                <div className="social-wrap flex pt-[65px]">
-                                    <span className="text-black font-medium">
-                                        Share this items :
                                     </span>
                                 </div>
                             </div>

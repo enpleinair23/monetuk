@@ -26,14 +26,14 @@ function Cart({ minicart, showMiniCart }) {
             >
                 <div className="minicart-top ml-[-8px]">
                     <IoCloseOutline
-                        className="text-secondary text-[32px] cursor-pointer"
+                        className=" text-[32px] hover:text-[#666666] cursor-pointer"
                         onClick={showMiniCart}
                     />
                 </div>
                 <div className="minicart-body pt-[25px]">
                     <div className="minicart-container">
                         {cartItems.length <= 0 && (
-                            <h2 className="text-[20px]">
+                            <h2 className="text-[20px] text-primary">
                                 Your cart is currently empty.
                             </h2>
                         )}
@@ -49,6 +49,7 @@ function Cart({ minicart, showMiniCart }) {
                                         price: item.price,
                                         slug: item.slug,
                                         image: item.image,
+                                        size: item.size,
                                     }}
                                 />
                             ))}
@@ -58,7 +59,7 @@ function Cart({ minicart, showMiniCart }) {
                                 <>
                                     <div className="minicart-subtotal flex justify-between text-[24px] font-medium pt-[40px]">
                                         <span>Subtotal:</span>
-                                        <span>${SubTotal.toFixed(2)}</span>
+                                        <span>£{SubTotal.toFixed(2)}</span>
                                     </div>
                                     <ul className="minicart-group-btn pt-[40px]">
                                         <li className="mb-[15px]">

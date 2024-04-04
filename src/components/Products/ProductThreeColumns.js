@@ -2,12 +2,9 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import ProductItem from './ProductItem';
-import ProductToolBars from './ProductToolBars';
-import ProductActiveFilter from './ProductActiveFilter';
 
 function ProductThreeColumns({
     products,
-    gridTabItems,
     productFilter,
     productFilterPath,
 }) {
@@ -60,7 +57,7 @@ function ProductThreeColumns({
                 <li className="px-[5px]" key={number}>
                     <span
                         className={`${
-                            currentPage === number ? 'active' : ''
+                            currentPage === number ? 'active text-white' : 'text-black'
                         } bg-[#f5f5f5] cursor-pointer flex items-center px-[13px] h-[34px] text-[12px] font-medium`}
                         id={number}
                         onClick={handleClick}
@@ -107,7 +104,7 @@ function ProductThreeColumns({
     };
 
     return (
-        <div className="product border-b border-[#ededed] py-[20px]">
+        <div className="product border-b border-[#ededed] pb-[40px]">
             <div className="container">
                 <div className="grid grid-cols-12 lg:gap-x-[25px]">
                     <div className="col-span-12">

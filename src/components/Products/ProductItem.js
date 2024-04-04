@@ -5,7 +5,6 @@ import {
     IoAddSharp,
     IoBagHandleOutline,
     IoPricetagOutline,
-    IoHeartOutline,
     IoRemoveSharp,
 } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
@@ -13,7 +12,6 @@ import QuickView from '../QuickView';
 
 import { cartActions } from '../../store/cart/cart-slice';
 import { filterActions } from '../../store/product-filter/filter-slice';
-import { wishlistActions } from '../../store/wishlist/wishlist-slice';
 
 // Tailwind Related Stuff
 const addAction =
@@ -21,12 +19,11 @@ const addAction =
 const addActionButton =
     'bg-white rounded-full flex justify-center items-center text-[21px] w-[45px] h-[45px] leading-[48px] hover:text-primary transition-all opacity-0 invisible ease-in-out transform translate-y-20 duration-[.5s] group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible';
 const soldOut = `bg-black text-white block leading-[28px] absolute top-[15px] right-[15px] px-[15px] z-[1]`;
-const bestSeller = `bg-[#f14705] text-[14px] text-white block rounded-full absolute top-[15px] left-[15px] w-[45px] h-[45px] leading-[45px] text-center z-[1]`;
-const productOffer = `bg-[#98d8ca] text-[14px] text-white block rounded-full absolute top-[70px] left-[15px] w-[45px] h-[45px] leading-[45px] text-center z-[1]`;
+const bestSeller = `bg-primary text-[14px] text-white block rounded-full absolute top-[15px] left-[15px] w-[45px] h-[45px] leading-[45px] text-center z-[1]`;
+const productOffer = `bg-primary text-[14px] text-white block rounded-full absolute top-[70px] left-[15px] w-[45px] h-[45px] leading-[45px] text-center z-[1]`;
 const qtybutton = `cursor-pointer text-center absolute w-[24px] leading-[23px]`;
 const qtyButtonWrap = `relative inline-flex border border-[#dddddd]`;
 const addtoCartBtn = `bg-black text-white px-[42px] h-[46px] leading-[44px]`;
-const wishlistBtn = `border border-[#dddddd] text-[20px] w-[46px] h-[46px] leading-[46px] inline-flex justify-center items-center transition-all hover:text-primary`;
 const textHover = `transition-all hover:text-primary`;
 
 function ProductItem({ product, productFilter, productFilterPath }) {
@@ -69,19 +66,6 @@ function ProductItem({ product, productFilter, productFilterPath }) {
         } else {
             dispatch(filterActions.removeFilter(data));
         }
-    };
-
-    const addToWishlistHandler = () => {
-        dispatch(
-            wishlistActions.addItemToWishlist({
-                id,
-                title,
-                price,
-                totalPrice,
-                image: `/images/products/${product?.slug}/${product?.xsImage}`,
-                slug: `/products/${product?.slug}`,
-            })
-        );
     };
 
     return (
@@ -128,7 +112,7 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                         <button
                         role="button"
                             type="button"
-                            className={`${addActionButton} mr-[15px] group-hover:delay-[0s]`}
+                            className={`${addActionButton}  group-hover:delay-[0s]`}
                             onClick={() => setIsOpen(true)}
                         >
                             <IoAddSharp />
@@ -138,56 +122,30 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                 soldOutSticker ? `cursor-not-allowed` : ''
                             }`}
                         >
-                            {!bestSellerSticker && (
-                                <button
-                                role="button"
-                                    type="button"
-                                    onClick={addToCartHandler}
-                                    className={`${
-                                        soldOutSticker
-                                            ? `pointer-events-none brightness-75`
-                                            : ''
-                                    }  ${addActionButton} mr-[15px] group-hover:delay-[.15s]`}
-                                >
-                                    <IoBagHandleOutline />
-                                </button>
-                            )}
-                            {bestSellerSticker && (
-                                <Link
-                                    href={`/products/${product?.slug}`}
-                                    className={`${
-                                        soldOutSticker
-                                            ? `pointer-events-none brightness-75`
-                                            : ''
-                                    }  ${addActionButton} mr-[15px] group-hover:delay-[.15s]`}
-                                >
-                                    <IoPricetagOutline />
-                                </Link>
-                            )}
                         </div>
                     </div>
                 </div>
                 <div className="product-content text-center">
-                    <h3 className="mb-[5px]">
+                    <h3 className="mb-[5px] text-primary">
                         <Link
                             href={`/products/${product?.slug}`}
-                            className="transition-all hover:text-primary text-[16px]"
+                            className="transition-all hover:text-primary text-[16px] text-primary"
                         >
                             {title}
                         </Link>
                     </h3>
                     {price && !discountPrice && (
                         <span className="product-price text-[18px] leading-[31px] text-[#666666]">
-                            ${price.toFixed(2)}
+                            £{price.toFixed(2)}
                         </span>
                     )}
                     {price && discountPrice && (
                         <div className="product-price-wrap flex justify-center mb-[10px]">
                             <span className="product-price text-[18px] leading-[31px] text-[#666666] block">
-                                ${price.toFixed(2)}
+                                £{price.toFixed(2)}
                             </span>
                             <span className="product-price text-[18px] leading-[31px] text-[#666666] block relative before:content-['-'] before:mx-[10px]">
-                                ${discountPrice.toFixed(2)}
+                                £{discountPrice.toFixed(2)}
                             </span>
                         </div>
                     )}
@@ -242,23 +200,23 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                             </Link>
                         </div>
                         <div className="product-content py-[40px] px-[30px]">
-                            <h2 className="text-[24px] mb-[15px]">{title}</h2>
+                            <h2 className="text-[24px] mb-[15px] text-primary">{title}</h2>
                             {price && !discountPrice && (
                                 <span className="product-price text-[30px] leading-[42px] text-[#999999] block mb-[25px]">
-                                    ${price.toFixed(2)}
+                                    £{price.toFixed(2)}
                                 </span>
                             )}
                             {price && discountPrice && (
                                 <div className="product-price-wrap flex mb-[10px]">
                                     <span className="product-price text-[30px] leading-[42px] text-[#999999] block">
-                                        ${price.toFixed(2)}
+                                        £{price.toFixed(2)}
                                     </span>
                                     <span className="product-price text-[30px] leading-[42px] text-[#999999] block relative before:content-['-'] before:mx-[10px]">
-                                        ${discountPrice.toFixed(2)}
+                                        £{discountPrice.toFixed(2)}
                                     </span>
                                 </div>
                             )}
-                            <h3 className="stock font-semibold text-[14px] mb-[20px]">
+                            <h3 className="stock font-semibold text-primary text-[14px] mb-[20px]">
                                 Available:
                                 <span className="text-[#3bc604] ml-[5px]">
                                     {product?.availability}
@@ -330,21 +288,13 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                         className={`${addtoCartBtn} ${
                                             soldOutSticker
                                                 ? `pointer-events-none`
-                                                : ''
+                                                : 'hover:bg-[#666666]'
                                         } mr-[15px]`}
                                         onClick={addToCartHandler}
                                     >
                                         Add to cart
                                     </button>
                                 </div>
-                                <button
-                                role="button"
-                                    onClick={addToWishlistHandler}
-                                    type="button"
-                                    className={`${wishlistBtn}`}
-                                >
-                                    <IoHeartOutline />
-                                </button>
                             </div>
                             <div className="sku-wrap font-medium">
                                 <span>SKU:</span>
@@ -380,42 +330,6 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                         </Link>
                                     )
                                 )}
-                            </div>
-                            <div className="tag-wrap flex max-xs:flex-wrap">
-                                <span className="text-black font-medium">
-                                    Tags:
-                                </span>
-                                {productFilter[0]?.tagList?.map(
-                                    (singleTagList) => (
-                                        <Link
-                                            href={`/products/${productFilterPath}`}
-                                            key={singleTagList.id}
-                                        >
-                                            <button
-                                                type="button"
-                                                className={`${textHover} capitalize text-[#666666] font-medium after:content-[","] last:after:content-none ml-[10px]`}
-                                                onClick={() =>
-                                                    filterChangeHandler(true, {
-                                                        title: singleTagList.tagTitle,
-                                                        key: singleTagList.tagTitle,
-                                                        group: 'tag',
-                                                    })
-                                                }
-                                            >
-                                                <span
-                                                    className={`${singleTagList.tagTitle}`}
-                                                >
-                                                    {singleTagList.tagTitle}
-                                                </span>
-                                            </button>
-                                        </Link>
-                                    )
-                                )}
-                            </div>
-                            <div className="social-wrap flex pt-[65px]">
-                                <span className="text-black font-medium">
-                                    Share this items :
-                                </span>
                             </div>
                         </div>
                     </div>

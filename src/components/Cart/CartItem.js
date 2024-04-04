@@ -7,7 +7,7 @@ import { cartActions } from '../../store/cart/cart-slice';
 function CartItem({ item }) {
     const dispatch = useDispatch();
 
-    const { image, slug, title, quantity, price } = item;
+    const { image, slug, title, quantity, price, size } = item;
 
     const removeItemFromCartHandler = (id) => {
         dispatch(cartActions.removeItemFromCart(id));
@@ -21,20 +21,23 @@ function CartItem({ item }) {
                 </Link>
             </div>
             <div className="item-content w-[calc(100%-88px)] pl-[20px]">
-                <h3 className="leading-[21px]">
+                <h3 className="leading-[21px] text-primary hover:text-[#666666]">
                     <Link
                         href={slug}
-                        className="text-[15px] transition-all hover:text-primary"
+                        className="text-[15px] transition-all text-primary hover:text-[#666666]"
                     >
                         {title}
                     </Link>
                 </h3>
                 <div className="font-medium text-[15px] leading-[26px]">
-                    Qty : <span className="text-[#666666]">{quantity}</span>
+                    Qty: <span className="text-[#666666]">{quantity}</span>
+                </div>
+                <div className="font-medium text-[15px] leading-[26px]">
+                    Size: <span className="text-[#666666]">{size}</span>
                 </div>
                 <div className="font-medium text-[13px] leading-[23px]">
                     Price:{' '}
-                    <span className="text-[#666666]">${price.toFixed(2)}</span>{' '}
+                    <span className="text-[#666666]">£{price.toFixed(2)}</span>{' '}
                 </div>
             </div>
             <button role="button" type="button" className="item-remove flex items-start">

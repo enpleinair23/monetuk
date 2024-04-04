@@ -6,15 +6,11 @@ function ContactUs({ contactItems }) {
     const inputField = `border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] py-[10px] px-[20px] w-full h-[50px]`;
     const textareaField = `border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] p-[15px] w-full h-[150px]`;
     const secondaryButton =
-        'flex bg-secondary text-white leading-[38px] text-[15px] h-[40px] px-[32px]';
+        'flex bg-primary hover:bg-secondary text-white leading-[38px] text-[15px] h-[40px] px-[32px]';
     return (
-        <div className='grid grid-cols-2 px-8 pb-20'>
-            <div className="contact">
-                <div className="container">
-                    <div className="max-lm:gap-y-[30px]">
-                        <div className="max-lm:order-2">
-                            <div className="contact-form-wrap">
-                                <form>
+        <div className='contact border-b border-[#ededed] pb-[40px]'>
+                <div className="flex container">
+                                <form className='w-2/3'>
                                     <div className="group-field flex mb-[20px]">
                                         <div
                                             className={`${singleField} mr-[20px]`}
@@ -59,14 +55,8 @@ function ContactUs({ contactItems }) {
                                         Submit
                                     </button>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div className="container flex justify-center">
-                    <div className=" max-md:gap-y-[30px]">
+                
+                                <div className="w-1/3 px-12 flex flex-col gap-8">
                         {contactItems[0]?.singleContactInfo?.map((items) => {
                             const InfoIcon = IoIcon[items.infoIcon];
                             return (
@@ -75,12 +65,12 @@ function ContactUs({ contactItems }) {
                                     key={items.id}
                                 >
                                     <div className="single-contact-info">
-                                        <div className="flex">
+                                        <div className="flex ">
                                             <span className="icon text-[36px]">
                                                 <InfoIcon />
                                             </span>
                                             <div className="content flex flex-col ml-[26px]">
-                                                <h2 className="text-[18px] mb-[10px]">
+                                                <h2 className="text-[18px] text-primary">
                                                     {items.title}
                                                 </h2>
                                                 <p
@@ -95,6 +85,8 @@ function ContactUs({ contactItems }) {
                             );
                         })}
                     </div>
+                
+                
                 </div>
         </div>
     );

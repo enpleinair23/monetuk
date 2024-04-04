@@ -29,7 +29,7 @@ function BlogItem({ blog }) {
                 </Link>
             </div>
             <div className="blog-content pt-[25px]">
-                <h2 className="text-[20px] leading-7 ">
+                <h2 className="text-[20px] text-primary leading-7 ">
                     <Link
                         href={`/blogs/${blog?.slug}`}
                         className="relative block pb-[15px] mb-[10px] before:bg-[#cacaca] before:absolute before:left-0 before:bottom-[-3px] before:h-[1.5px] before:w-[70px]  before:transition before:ease-in-out before:duration-[800ms] after:bg-primary after:absolute after:left-0 after:bottom-[-3px] after:h-[1.5px] after:w-0 after:transform after:transition-all after:duration-500 group-hover:after:w-[70px]"
@@ -47,15 +47,6 @@ function BlogItem({ blog }) {
                     >
                         {blog?.author}
                     </Link>
-                    <span>
-                        <span className="text-[#999999] mr-[5px]">in</span>
-                        <Link
-                            href={`/blogs/${blog?.slug}`}
-                            className="category font-normal hover:text-primary transition-all"
-                        >
-                            {blog?.categoryItem}
-                        </Link>
-                    </span>
                 </div>
             </div>
         </div>
