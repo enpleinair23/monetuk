@@ -42,21 +42,8 @@ function MainContent({ product }) {
         );
     };
 
-    const addToWishlistHandler = () => {
-        dispatch(
-            wishlistActions.addItemToWishlist({
-                id,
-                title,
-                price,
-                totalPrice,
-                image: `/images/products/${product?.slug}/${product?.xsImage}`,
-                slug: `/products/${product?.slug}`,
-            })
-        );
-    };
-
     return (
-        <div className="product-detail border-b border-[#ededed] md:py-[90px] py-[50px]">
+        <div className="product-detail pb-[40px]">
             <div className="container">
                 <div className="grid grid-cols-12 lg:gap-x-[25px] max-md:gap-y-[25px]">
                     <div className="lg:col-span-6 col-span-12">

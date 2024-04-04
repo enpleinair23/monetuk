@@ -9,7 +9,7 @@ function ProductDetailTab({ product, productDetailTabItems }) {
         setProductDetailTabState(index);
     };
     return (
-        <div className="product-detail-tab pt-[95px]">
+        <div className="product-detail-tab">
             <div className="container">
                 <ul className="product-detail-tab-menu flex max-sm:flex-wrap border-b border-[#dddddd] pb-[20px]">
                     {productDetailTabItems[0]?.tabMenuItems?.map(
@@ -47,7 +47,7 @@ function ProductDetailTab({ product, productDetailTabItems }) {
                             <div className="grid grid-cols-12 lm:gap-x-[30px] max-sm:gap-y-[30px]">
                                 <div className="lm:col-span-7 col-span-12 self-center">
                                     <div>
-                                        <h2 className="text-[24px] mb-[10px]">
+                                        <h2 className="text-[24px] mb-[10px] text-primary">
                                             {
                                                 productDetailTabItems[0]
                                                     ?.descriptionTitle
@@ -74,7 +74,7 @@ function ProductDetailTab({ product, productDetailTabItems }) {
                             <div className="grid grid-cols-12 lm:gap-x-[30px] max-sm:gap-y-[30px]">
                                 <div className="lm:col-span-7 col-span-12 self-center">
                                     <div>
-                                        <h2 className="text-[24px] mb-[10px]">
+                                        <h2 className="text-[24px] mb-[10px] text-primary">
                                             {
                                                 productDetailTabItems[0]
                                                     ?.featureTitle

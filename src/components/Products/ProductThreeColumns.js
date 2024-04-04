@@ -130,48 +130,6 @@ function ProductThreeColumns({
                                     ))}
                             </div>
                         </div>
-                        <div
-                            className={
-                                tabState === 2
-                                    ? 'grid-content-04 tab-style-common active'
-                                    : 'grid-content-04 tab-style-common'
-                            }
-                        >
-                            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-x-[25px] gap-y-[40px]">
-                                {currentItems &&
-                                    currentItems.map((product) => (
-                                        <ProductItem
-                                            product={product}
-                                            productFilter={productFilter}
-                                            productFilterPath={
-                                                productFilterPath
-                                            }
-                                            key={product.id}
-                                        />
-                                    ))}
-                            </div>
-                        </div>
-                        <div
-                            className={
-                                tabState === 3
-                                    ? 'grid-content-05 tab-style-common active'
-                                    : 'grid-content-05 tab-style-common'
-                            }
-                        >
-                            <div className="grid lg:grid-cols-5 md:grid-cols-4 lm:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-x-[25px] gap-y-[40px]">
-                                {currentItems &&
-                                    currentItems.map((product) => (
-                                        <ProductItem
-                                            product={product}
-                                            productFilter={productFilter}
-                                            productFilterPath={
-                                                productFilterPath
-                                            }
-                                            key={product.id}
-                                        />
-                                    ))}
-                            </div>
-                        </div>
                         <ul className="pagination flex justify-center pt-[40px]">
                             <li className="px-[5px]">
                                 <button

@@ -11,7 +11,7 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
         year: 'numeric',
     });
     return (
-        <div className="blog-detail border-b border-[#ededed] xl:py-[120px] lg:py-[100px] md:py-[80px] py-[50px]">
+        <div className="blog-detail border-b border-[#ededed] pb-[40px]">
             <div className="container">
                 <div className="blog-detail-item">
                     <div className="blog-detail-img">
@@ -24,7 +24,7 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
                         />
                     </div>
                     <div className="blog-detail-content pt-[25px]">
-                        <h2 className="lm:text-[30px] text-[24px] mb-[15px]">
+                        <h2 className="lm:text-[30px] text-[24px] mb-[15px] text-primary">
                             {blog?.title}
                         </h2>
                         <div className="inner-content lg:ml-[145px]">
@@ -78,7 +78,6 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
                     </div>
                 </div>
                 <PageNavigation prevBlog={prevBlog} nextBlog={nextBlog} />
-                <DisqusForm />
             </div>
         </div>
     );

@@ -51,6 +51,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                                     >
                                         <Link
                                             href={item?.path}
+                                            target='_blank'
                                             className="transition-all hover:text-[#666666]"
                                         >
                                             <Social />

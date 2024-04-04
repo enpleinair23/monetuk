@@ -15,13 +15,6 @@ tabMenuItems:
             separatorCName: 'tab-menu-separator',
             tabStateNumber: 2,
         },
-        {
-            id: 'tab-menu-03',
-            name: 'Reviews',
-            CName: 'reviews',
-            separatorCName: 'tab-menu-separator',
-            tabStateNumber: 3,
-        },
     ]
 descriptionTitle: 'Description'
 descriptionExcerpt: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum omnis voluptas assumenda.'
@@ -51,15 +44,5 @@ infoThList:
             infoThName: 'Dimensions',
             infoThValue: '12 x 2 x 1.5 cm',
         },
-    ]
-reviewHeading: 'Be the first to review “Wooden chair”'
-reviewTitle: 'Your rating'
-ratingLists:
-    [
-        { id: 'rating-list-01' },
-        { id: 'rating-list-02' },
-        { id: 'rating-list-03' },
-        { id: 'rating-list-04' },
-        { id: 'rating-list-05' },
     ]
 ---

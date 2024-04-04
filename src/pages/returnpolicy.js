@@ -2,17 +2,17 @@ import PropTypes from 'prop-types';
 import { getAllItems } from '../lib/ItemsUtil';
 import HeaderOne from '../components/HeaderComps';
 import FooterComps from '../components/FooterComps';
-import TermsConditions from '../components/TermsConditions';
+import ReturnPolicy from '../components/ReturnPolicy';
 
-function TermsconditionsPage({
+function ReturnpolicyPage({
     headerItems,
-    termsconditionsItems,
+    returnpolicyItems,
     footerItems,
 }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <TermsConditions termsconditionsItems={termsconditionsItems}/>
+            <ReturnPolicy returnpolicyItems={returnpolicyItems}/>
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}
@@ -23,22 +23,22 @@ function TermsconditionsPage({
 
 export function getStaticProps() {
     const headerItems = getAllItems('header');
-    const termsconditionsItems = getAllItems('termsconditions');
+    const returnpolicyItems = getAllItems('returnpolicy');
     const footerItems = getAllItems('footer');
 
     return {
         props: {
             headerItems,
-            termsconditionsItems,
+            returnpolicyItems,
             footerItems,
         },
     };
 }
 
-TermsconditionsPage.propTypes = {
+ReturnpolicyPage.propTypes = {
     headerItems: PropTypes.instanceOf(Object).isRequired,
-    termsconditionsItems: PropTypes.instanceOf(Object).isRequired,
+    returnpolicyItems: PropTypes.instanceOf(Object).isRequired,
     footerItems: PropTypes.instanceOf(Object).isRequired,
 };
 
-export default TermsconditionsPage;
+export default ReturnpolicyPage;

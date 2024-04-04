@@ -4,8 +4,8 @@ import { IoChevronBackSharp, IoChevronForwardSharp } from 'react-icons/io5';
 
 function PageNavigation({ prevBlog, nextBlog }) {
     return (
-        <div className="page-navigation pt-[60px]">
-            <div className="page-navigation-inner border-t border-b border-[#cacaca] py-[40px]">
+        <div className="page-navigation">
+            <div className="page-navigation-inner pt-[40px]">
                 <div className="grid lm:grid-cols-2 grid-cols-1 relative text-[18px] z-[1]">
                     <div className="page-navigation-holder flex">
                         <Link

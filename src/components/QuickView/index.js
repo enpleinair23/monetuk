@@ -20,7 +20,7 @@ function QuickView({ children, open, onClose }) {
                         className="quickview-top absolute top-[20px] right-[20px] z-[1]"
                         onClick={onClose}
                     >
-                        <IoCloseOutline className="text-[32px] cursor-pointer" />
+                        <IoCloseOutline className="text-[32px] cursor-pointer hover:text-[#666666]" />
                     </div>
                     {children}
                 </div>

@@ -11,7 +11,7 @@ singleContactInfo:
             id: 02,
             infoIcon: 'IoCallOutline',
             title: 'Phone number',
-            desc: '(504) 586 256 23',
+            desc: '07585 445056',
         },
         {
             id: 03,

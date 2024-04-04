@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import { getAllItems } from '../lib/ItemsUtil';
-import TransparentHeader from '../components/HeaderComps/TransparentHeader';
+import HeaderOne from '../components/HeaderComps';
+import PrivacyPolicy from "../components/PrivacyPolicy"
 import FooterComps from '../components/FooterComps';
 
 function PrivacypolicyPage({
     headerItems,
+    privacypolicyItems,
     footerItems,
 }) {
     return (
         <>
-            <TransparentHeader headerItems={headerItems}/>
+            <HeaderOne headerItems={headerItems} headerContainer="container" />
+            <PrivacyPolicy privacypolicyItems={privacypolicyItems}/>
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}
@@ -20,11 +23,13 @@ function PrivacypolicyPage({
 
 export function getStaticProps() {
     const headerItems = getAllItems('header');
+    const privacypolicyItems = getAllItems('privacypolicy');
     const footerItems = getAllItems('footer');
 
     return {
         props: {
             headerItems,
+            privacypolicyItems,
             footerItems,
         },
     };
@@ -32,6 +37,7 @@ export function getStaticProps() {
 
 PrivacypolicyPage.propTypes = {
     headerItems: PropTypes.instanceOf(Object).isRequired,
+    privacypolicyItems: PropTypes.instanceOf(Object).isRequired,
     footerItems: PropTypes.instanceOf(Object).isRequired,
 };
 

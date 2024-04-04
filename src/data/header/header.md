@@ -13,10 +13,10 @@ socialList:
         {
             id: 01,
             socialIcon: 'FaInstagram',
-            path: 'https://www.facebook.com/',
+            path: 'https://www.instagram.com/monetuk3/',
         },
-        { id: 02, socialIcon: 'FaTwitter', path: 'https://twitter.com/' },
-        { id: 03, socialIcon: 'FaYoutube', path: 'https://www.tumblr.com/' },
+        { id: 02, socialIcon: 'FaTwitter', path: 'https://twitter.com/MonetK88651' },
+        { id: 03, socialIcon: 'FaYoutube', path: 'https://www.youtube.com/@MONETUK' },
     ]
 homeBoxedMenu:
     [

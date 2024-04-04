@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-import * as IoIcon from 'react-icons/io5';
-import ProgressBar from '../ProgressBar';
 import VideoModal from '../VideoModal';
 
 function AboutUs({ aboutItems }) {
