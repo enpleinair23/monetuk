@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { IoAddSharp, IoHeartOutline, IoRemoveSharp } from 'react-icons/io5';
+import { IoAddSharp, IoRemoveSharp } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/cart/cart-slice';
-import { wishlistActions } from '../../../store/wishlist/wishlist-slice';
 
 // Tailwind Related Stuff
 const soldOut = `bg-black text-white block leading-[28px] absolute top-[15px] right-[15px] px-[15px] z-[1]`;
@@ -12,7 +11,6 @@ const productOffer = `bg-[#98d8ca] text-[14px] text-white block rounded-full abs
 const qtybutton = `cursor-pointer text-center absolute w-[24px] leading-[23px]`;
 const qtyButtonWrap = `relative inline-flex border border-[#dddddd]`;
 const addtoCartBtn = `bg-black text-white px-[42px] h-[46px] leading-[44px]`;
-const wishlistBtn = `border border-[#dddddd] text-[20px] w-[46px] h-[46px] leading-[46px] inline-flex justify-center items-center transition-all hover:text-primary`;
 
 function MainContent({ product }) {
     const {
