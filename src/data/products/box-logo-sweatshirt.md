@@ -1,13 +1,13 @@
 ---
 id: 'product-02'
-title: 'Box Logo Sweatshirt'
-xsImage: '74x74.jpg'
-smImage: '300x300.jpg'
-mdImage: '585x585.jpg'
+title: 'Box Logo Hoodie'
+xsImage: '300x300.jpg'
+smImage: '600x600.jpg'
+mdImage: '1200x1200.jpg'
 altImage: 'Product Image'
 price: 40
 desc: 'At vero accusamus et iusto odio dignissimos blanditiis praesentiums dolores molest.'
-sku: 103
+sku: 102
 category: 'Tops'
 availability: 'In Stock'
 size: 'Small'
