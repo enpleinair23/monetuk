@@ -3,13 +3,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import {
     IoAddSharp,
-    IoBagHandleOutline,
-    IoPricetagOutline,
     IoRemoveSharp,
 } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import QuickView from '../QuickView';
-
 import { cartActions } from '../../store/cart/cart-slice';
 import { filterActions } from '../../store/product-filter/filter-slice';
 
@@ -24,13 +21,14 @@ const productOffer = `bg-primary text-[14px] text-white block rounded-full absol
 const qtybutton = `cursor-pointer text-center absolute w-[24px] leading-[23px]`;
 const qtyButtonWrap = `relative inline-flex border border-[#dddddd]`;
 const addtoCartBtn = `bg-black text-white px-[42px] h-[46px] leading-[44px]`;
-const textHover = `transition-all hover:text-primary`;
 
-function ProductItem({ product, productFilter, productFilterPath }) {
+function ProductItem({ product }) {
     const {
         id,
         title,
         price,
+        size,
+        color,
         discountPrice,
         totalPrice,
         soldOutSticker,
@@ -52,20 +50,14 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                 id,
                 title,
                 price,
+                size,
+                color,
                 quantity: quantityCount,
                 totalPrice,
                 image: `/images/products/${product?.slug}/${product?.xsImage}`,
                 slug: `/products/${product?.slug}`,
             })
         );
-    };
-
-    const filterChangeHandler = (isAdd, data) => {
-        if (isAdd) {
-            dispatch(filterActions.addFilter(data));
-        } else {
-            dispatch(filterActions.removeFilter(data));
-        }
     };
 
     return (
@@ -223,6 +215,22 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                 </span>
                             </h3>
                             <p>{desc}</p>
+                            <div className="category-wrap flex max-xs:flex-wrap">
+                                <span className="text-black font-medium">
+                                    Size:
+                                </span>
+                                <span className="text-[#666666] ml-[5px]">
+                                        {product?.size}
+                                    </span>
+                            </div>
+                            <div className="category-wrap flex max-xs:flex-wrap">
+                                <span className="text-black font-medium">
+                                    Colour:
+                                </span>
+                                <span className="text-[#666666] ml-[5px]">
+                                        {product?.color}
+                                    </span>
+                            </div>
                             <div className="group-btn flex max-xs:flex-wrap py-[30px]">
                                 <div
                                     className={`${qtyButtonWrap} mr-[15px] max-xs:mb-[10px]`}
@@ -306,30 +314,9 @@ function ProductItem({ product, productFilter, productFilterPath }) {
                                 <span className="text-black font-medium">
                                     Categories:
                                 </span>
-                                {productFilter[0]?.categoryList?.map(
-                                    (singleCategoryList) => (
-                                        <Link
-                                            href={`/products/${productFilterPath}`}
-                                            key={singleCategoryList.id}
-                                        >
-                                            <button
-                                                type="button"
-                                                className={`${textHover} capitalize text-[#666666] font-medium after:content-[","] last:after:content-none ml-[10px]`}
-                                                onClick={() =>
-                                                    filterChangeHandler(true, {
-                                                        title: singleCategoryList.categoryListTitle,
-                                                        key: singleCategoryList.categoryListTitle,
-                                                        group: 'category',
-                                                    })
-                                                }
-                                            >
-                                                {
-                                                    singleCategoryList.categoryListTitle
-                                                }
-                                            </button>
-                                        </Link>
-                                    )
-                                )}
+                                <span className="text-[#666666] ml-[5px]">
+                                        {product?.category}
+                                    </span>
                             </div>
                         </div>
                     </div>

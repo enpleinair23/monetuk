@@ -50,6 +50,7 @@ function Cart({ minicart, showMiniCart }) {
                                         slug: item.slug,
                                         image: item.image,
                                         size: item.size,
+                                        color: item.color,
                                     }}
                                 />
                             ))}

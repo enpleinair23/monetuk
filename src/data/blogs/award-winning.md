@@ -1,15 +1,19 @@
 ---
 id: 'blog-01'
-title: 'Intelligent, award-winning product of the designer Thomas in 2023.'
+title: 'MONET U.K® - YEAR 1'
 mediumImage: '374x243.jpg'
 masonry: '366x423.jpg'
 largeImage: '854x491.jpg'
 extraLargeImage: '1146x745.jpg'
-altImage: 'Award Winning'
-date: '2023-10-23'
-author: 'Admin'
+altImage: 'Year One'
+date: '2024-03-10'
+author: 'News'
 categoryItem: 'furniture'
-desc: 'Contrary to popular belief, Lorem Ipsum indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in…'
+desc: 'This is the first post on our new blog!
+
+There is going to be a lot of more interesting things in the future.
+
+So just keep posted!'
 category:
     - all | <span>(09)</span>
     - furniture | <span>(02)</span>

@@ -1,10 +1,4 @@
 ---
-categoryList:
-    [
-        { id: 'categoryList-01', categoryListTitle: 'accessory' },
-        { id: 'categoryList-02', categoryListTitle: 'decoration' },
-        { id: 'categoryList-03', categoryListTitle: 'furniture' },
-    ]
 availabilityList:
     [
         {
@@ -55,14 +49,6 @@ productSizeList:
             key: 'small',
             group: 'size',
         },
-    ]
-colorList:
-    [
-        { id: 'color-01', colorOption: 'black' },
-        { id: 'color-02', colorOption: 'green' },
-        { id: 'color-03', colorOption: 'gray' },
-        { id: 'color-04', colorOption: 'red' },
-        { id: 'color-05', colorOption: 'yellow' },
     ]
 tagList:
     [

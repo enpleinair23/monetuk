@@ -6,7 +6,7 @@ smImage: '600x600.jpg'
 mdImage: '1200x1200.jpg'
 altImage: 'Product Image'
 price: 25
-desc: 'At vero accusamus et iusto odio dignissimos blanditiis praesentiums dolores molest.'
+desc: 'Crafted from heavyweight, ultra-soft cotton blend fabric.'
 sku: 101
 category: 'Tops'
 availability: 'In Stock'

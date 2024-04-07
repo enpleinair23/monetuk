@@ -63,7 +63,7 @@ function CartPageComps({ cartPageItems }) {
                         <>
                             <div className="relative overflow-x-auto">
                                 <table className="cart-table w-full text-sm text-left">
-                                    <thead className="text-[18px] bg-[#f4f5f7]">
+                                    <thead className="text-[18px]">
                                         <tr>
                                             {cartPageItems[0]?.cartThList?.map(
                                                 (singleCartTh) => (
@@ -80,7 +80,7 @@ function CartPageComps({ cartPageItems }) {
                                     </thead>
                                     {cartItems.map((item) => (
                                         <tbody key={item.id}>
-                                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                            <tr className="bg-white">
                                                 <td className="py-4 product-name pr-[25px] flex items-center font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                                     <Link
                                                         href={item.slug}
@@ -94,14 +94,14 @@ function CartPageComps({ cartPageItems }) {
                                                     <h2 className="product-name">
                                                         <Link
                                                             href={item.slug}
-                                                            className="text-[14px] transition-all hover:text-primary"
+                                                            className="text-[14px] transition-all text-primary hover:text-secondary"
                                                         >
                                                             {item.name}
                                                         </Link>
                                                     </h2>
                                                 </td>
                                                 <td className="py-4">
-                                                    ${item.price.toFixed(2)}
+                                                    £{item.price.toFixed(2)}
                                                 </td>
                                                 <td className="py-4">
                                                     <div
@@ -200,7 +200,7 @@ function CartPageComps({ cartPageItems }) {
                                                     </div>
                                                 </td>
                                                 <td className="py-4">
-                                                    $
+                                                    £
                                                     {item.totalPrice.toFixed(2)}
                                                 </td>
                                                 <td className="py-4 text-right">
@@ -241,36 +241,8 @@ function CartPageComps({ cartPageItems }) {
                                 </div>
                             </div>
                             <div className="cart-info pt-[50px]">
-                                <div className="grid grid-cols-12 md:gap-x-[30px] max-lm:gap-y-[30px]">
-                                    <div className="md:col-span-6 col-span-12">
-                                        <div className="coupon flex flex-col lg:max-w-[400px]">
-                                            <h2 className="title text-[18px] mb-[30px]">
-                                                {cartPageItems[0]?.couponTitle}
-                                            </h2>
-                                            <p className="desc mb-[15px]">
-                                                {cartPageItems[0]?.couponDesc}
-                                            </p>
-                                            <input
-                                                type="text"
-                                                name="coupon"
-                                                placeholder="Coupon code"
-                                                className="border border-[#cccccc] outline-none p-[15px_15px_13px]"
-                                            />
-                                            <div className="btn-wrap inline-flex items-center pt-[30px]">
-                                                <button
-                                                    type="submit"
-                                                    className=" border border-black h-[46px] px-[42px] transition-all hover:bg-[#222222] hover:text-white"
-                                                >
-                                                    {
-                                                        cartPageItems[0]
-                                                            ?.couponBtnText
-                                                    }
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="md:col-span-6 col-span-12">
-                                        <div className="cart-subtotal lg:max-w-[400px] ml-auto">
+                                <div className="flex justify-end">
+                                        <div className="cart-subtotal ml-auto">
                                             <div className="border border-[#bfbfbf] bg-[#f9f9f9] px-[30px]">
                                                 <ul className="content py-[30px]">
                                                     <li className="item flex justify-between border-b border-[#cdcdcd] pb-[16px] mb-[17px]">
@@ -278,7 +250,7 @@ function CartPageComps({ cartPageItems }) {
                                                             Subtotal:
                                                         </span>
                                                         <span>
-                                                            $
+                                                            £
                                                             {SubTotal.toFixed(
                                                                 2
                                                             )}
@@ -289,7 +261,7 @@ function CartPageComps({ cartPageItems }) {
                                                             Total:
                                                         </span>
                                                         <span>
-                                                            $
+                                                            £
                                                             {SubTotal.toFixed(
                                                                 2
                                                             )}
@@ -309,7 +281,6 @@ function CartPageComps({ cartPageItems }) {
                                                 </Link>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </>

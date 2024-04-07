@@ -43,7 +43,7 @@ function BlogItem({ blog }) {
                     </span>
                     <Link
                         href="https://www.example.com/"
-                        className='author font-normal hover:text-primary transition-all after:text-[#999999] after:px-[8px] after:content-["/"]'
+                        className='author font-normal hover:text-primary transition-all after:text-[#999999]'
                     >
                         {blog?.author}
                     </Link>

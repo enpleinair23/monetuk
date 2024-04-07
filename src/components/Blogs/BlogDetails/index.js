@@ -22,39 +22,23 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
                             height={761}
                         />
                     </div>
-                    <div className="blog-detail-content pt-[25px]">
+                    <div className="blog-detail-content pt-[20px]">
                         <h2 className="lm:text-[30px] text-[24px] mb-[15px] text-primary">
                             {blog?.title}
                         </h2>
-                        <div className="inner-content lg:ml-[145px]">
+                        <div className="inner-content">
                             <div className="blog-meta text-[14px] mb-[15px]">
                                 <span className='date after:text-[#999999] after:px-[8px] after:content-["/"]'>
                                     {formattedDate}
                                 </span>
                                 <Link
                                     href="https://www.example.com/"
-                                    className='author font-normal hover:text-primary transition-all after:text-[#999999] after:px-[8px] after:content-["/"]'
+                                    className='author font-normal hover:text-primary transition-all after:text-[#999999]'
                                 >
                                     {blog?.author}
                                 </Link>
-                                <span>
-                                    <span className="text-[#999999] mr-[5px]">
-                                        in
-                                    </span>
-                                    <span className="category font-norma">
-                                        {blog?.categoryItem}
-                                    </span>
-                                </span>
                             </div>
-                            <p className="lg:max-w-[810px]">{blog?.desc}</p>
-                            <blockquote className="relative pt-[4px] pl-[35px] my-[35px] ml-[35px]">
-                                <span className="absolute top-0 left-0 transform -rotate-[180deg]">
-                                    <FaQuoteRight />
-                                </span>
-                                <p className="blockquote-desc font-medium leading-6">
-                                    {blog?.blockquoteDesc}
-                                </p>
-                            </blockquote>
+                            <p className="pb-[20px]">{blog?.desc}</p>
                         </div>
                         <div className="rich-text-item">
                             <div className="rich-text-img grid grid-cols-2 gap-[30px]">

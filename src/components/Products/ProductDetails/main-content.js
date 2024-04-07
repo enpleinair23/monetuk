@@ -17,6 +17,8 @@ function MainContent({ product }) {
         id,
         title,
         price,
+        size,
+        color,
         discountPrice,
         totalPrice,
         soldOutSticker,
@@ -32,6 +34,8 @@ function MainContent({ product }) {
                 id,
                 title,
                 price,
+                size,
+                color,
                 quantity: quantityCount,
                 totalPrice,
                 image: `/images/products/${product?.slug}/${product?.xsImage}`,
@@ -104,6 +108,22 @@ function MainContent({ product }) {
                             <p className="text-[14px] leading-[24px] lg:max-w-[450px]">
                                 {product?.desc}
                             </p>
+                            <div className="category-wrap flex max-xs:flex-wrap">
+                                <span className="text-black font-medium">
+                                    Size:
+                                </span>
+                                <span className="text-[#666666] ml-[5px]">
+                                        {product?.size}
+                                    </span>
+                            </div>
+                            <div className="category-wrap flex max-xs:flex-wrap">
+                                <span className="text-black font-medium">
+                                    Colour:
+                                </span>
+                                <span className="text-[#666666] ml-[5px]">
+                                        {product?.color}
+                                    </span>
+                            </div>
                             <div className="group-btn flex py-[30px]">
                                 <div className={`${qtyButtonWrap} mr-[15px]`}>
                                     <div className="flex justify-center w-[120px]">

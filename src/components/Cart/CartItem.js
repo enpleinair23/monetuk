@@ -7,7 +7,7 @@ import { cartActions } from '../../store/cart/cart-slice';
 function CartItem({ item }) {
     const dispatch = useDispatch();
 
-    const { image, slug, title, quantity, price, size } = item;
+    const { image, slug, title, quantity, price, size, color } = item;
 
     const removeItemFromCartHandler = (id) => {
         dispatch(cartActions.removeItemFromCart(id));

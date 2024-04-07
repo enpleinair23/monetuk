@@ -30,6 +30,7 @@ const cartSlice = createSlice({
                     image: newItem.image,
                     slug: newItem.slug,
                     size: newItem.size,
+                    color: newItem.color,
                 });
             } else {
                 existingItem.quantity++;
