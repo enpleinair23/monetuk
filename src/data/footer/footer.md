@@ -17,7 +17,7 @@ socialMediaList:
     ]
 menuList:
     [
-        { id: 01, title: 'Term & Conditions', path: '/termsconditions' },
+        { id: 01, title: 'Terms & Conditions', path: '/termsconditions' },
         { id: 02, title: 'Privacy Policy', path: '/privacypolicy' },
         { id: 03, title: 'Return Policy', path: '/returnpolicy' },
     ]

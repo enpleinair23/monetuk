@@ -156,7 +156,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                             }}
                                         >
                                             <Link
-                                                href="/products/3-columns"
+                                                href="/products/collections"
                                                 className={secondaryButton}
                                             >
                                                 Shop Now
