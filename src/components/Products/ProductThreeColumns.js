@@ -96,25 +96,12 @@ function ProductThreeColumns({
         pageDecrementBtn = <li onClick={handlePrevbtn}>&hellip;</li>;
     }
 
-    // Tab
-    const [tabState, setTabState] = useState(1);
-    const productTab = (index) => {
-        setTabState(index);
-    };
-
     return (
         <div className="product border-b border-[#ededed] pb-[40px]">
             <div className="container">
                 <div className="grid grid-cols-12 lg:gap-x-[25px]">
                     <div className="col-span-12">
-
-                        <div
-                            className={
-                                tabState === 1
-                                    ? 'grid-content-03 tab-style-common active'
-                                    : 'grid-content-03 tab-style-common'
-                            }
-                        >
+                        <div>
                             <div className="grid md:grid-cols-3 lm:grid-cols-2 grid-cols-1 lm:gap-x-[25px] gap-y-[40px] ">
                                 {currentItems &&
                                     currentItems.map((product) => (
@@ -147,8 +134,8 @@ function ProductThreeColumns({
                             <li className="px-[5px]">
                                 <button
                                     className={`${currentPage === pages[pages.length - 1]
-                                            ? 'hidden'
-                                            : ''
+                                        ? 'hidden'
+                                        : ''
                                         } bg-[#f5f5f5] cursor-pointer flex items-center text-[14px] px-[13px] h-[34px]`}
                                     type="button"
                                     onClick={handleNextbtn}

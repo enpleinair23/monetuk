@@ -5,7 +5,7 @@ import { IoArrowForwardOutline } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 import SwiperComps, { Slide } from '../SwiperComps';
 
-function HeroOne({ heroDefaultItems, settings }) {
+function HeroOne({ heroItems, settings }) {
     const [activeIdx, setActiveId] = useState(0);
     const onSlideChange = (SwiperComps) => {
         const { activeIndex } = SwiperComps;
@@ -45,10 +45,10 @@ function HeroOne({ heroDefaultItems, settings }) {
                     sliderCName="pagination-bg-primary"
                     settings={settings}
                 >
-                    {heroDefaultItems?.map((heroDefaultItem, idx) => (
-                        <Slide key={heroDefaultItem.id}>
+                    {heroItems?.map((heroItem, idx) => (
+                        <Slide key={heroItem.id}>
                             <div
-                                className={`${heroDefaultItem.heroBG
+                                className={`${heroItem.heroBG
                                     .split(' ')
                                     .join(' ')} md:h-[800px] h-[540px]`}
                             >
@@ -57,7 +57,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                         <motion.span
                                             className="text-primary font-medium text-[40px] block mb-[5px]"
                                             dangerouslySetInnerHTML={{
-                                                __html: heroDefaultItem.subtitle,
+                                                __html: heroItem.subtitle,
                                             }}
                                             initial="hidden"
                                             animate={
@@ -91,7 +91,7 @@ function HeroOne({ heroDefaultItems, settings }) {
                                         />
                                         <motion.p
                                             dangerouslySetInnerHTML={{
-                                                __html: heroDefaultItem.desc,
+                                                __html: heroItem.desc,
                                             }}
                                             initial="hidden"
                                             animate={

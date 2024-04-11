@@ -39,7 +39,7 @@ function MainContent({ product }) {
                 quantity: quantityCount,
                 totalPrice,
                 image: `/images/products/${product?.slug}/${product?.xsImage}`,
-                slug: `/products/${product?.slug}`,
+                slug: `/shop/${product?.slug}`,
             })
         );
     };

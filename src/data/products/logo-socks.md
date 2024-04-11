@@ -10,7 +10,7 @@ desc: 'Crafted from knitted, ultra-soft cotton blend fabric.'
 sku: 103
 category: 'Accessories'
 availability: 'In Stock'
-size: ''
+size: '9-13'
 color: 'White'
 isFeatured: true
 

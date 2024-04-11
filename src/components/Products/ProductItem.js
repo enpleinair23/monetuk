@@ -8,7 +8,6 @@ import {
 import { useDispatch } from 'react-redux';
 import QuickView from '../QuickView';
 import { cartActions } from '../../store/cart/cart-slice';
-import { filterActions } from '../../store/product-filter/filter-slice';
 
 // Tailwind Related Stuff
 const addAction =
@@ -55,7 +54,7 @@ function ProductItem({ product }) {
                 quantity: quantityCount,
                 totalPrice,
                 image: `/images/products/${product?.slug}/${product?.xsImage}`,
-                slug: `/products/${product?.slug}`,
+                slug: `/shop/${product?.slug}`,
             })
         );
     };
@@ -64,7 +63,7 @@ function ProductItem({ product }) {
         <>
             <div className="product-item">
                 <div className="product-img relative group after:bg-[rgba(0,0,0,.1)] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:opacity-0 after:transition-all after:pointer-events-none hover:after:opacity-100">
-                    <Link href={`/products/${product?.slug}`} className="block">
+                    <Link href={`/shop/${product?.slug}`} className="block">
                         {soldOutSticker && (
                             <span
                                 className={`${soldOutSticker ? `${soldOut}` : ''
@@ -116,7 +115,7 @@ function ProductItem({ product }) {
                 <div className="product-content text-center">
                     <h3 className="mb-[5px] text-primary">
                         <Link
-                            href={`/products/${product?.slug}`}
+                            href={`/shop/${product?.slug}`}
                             className="transition-all hover:text-primary text-[16px] text-primary"
                         >
                             {title}
@@ -144,7 +143,7 @@ function ProductItem({ product }) {
                     <div className="grid md:grid-cols-2 grid-cols-1">
                         <div className="product-img md:h-full">
                             <Link
-                                href={`/products/${product?.slug}`}
+                                href={`/shop/${product?.slug}`}
                                 className="block relative md:h-full"
                             >
                                 {soldOutSticker && (

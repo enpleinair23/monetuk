@@ -6,13 +6,13 @@ import FooterComps from '../components/FooterComps';
 
 function HomePage({
     headerItems,
-    heroDefaultItems,
+    heroItems,
     footerItems,
 }) {
     return (
         <>
             <TransparentHeader headerItems={headerItems} />
-            <HeroOne heroDefaultItems={heroDefaultItems} />
+            <HeroOne heroItems={heroItems} />
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}
@@ -23,13 +23,13 @@ function HomePage({
 
 export function getStaticProps() {
     const headerItems = getAllItems('header');
-    const heroDefaultItems = getAllItems('hero-default');
+    const heroItems = getAllItems('hero');
     const footerItems = getAllItems('footer');
 
     return {
         props: {
             headerItems,
-            heroDefaultItems,
+            heroItems,
             footerItems,
         },
     };
@@ -37,7 +37,7 @@ export function getStaticProps() {
 
 HomePage.propTypes = {
     headerItems: PropTypes.instanceOf(Object).isRequired,
-    heroDefaultItems: PropTypes.instanceOf(Object).isRequired,
+    heroItems: PropTypes.instanceOf(Object).isRequired,
     footerItems: PropTypes.instanceOf(Object).isRequired,
 };
 

@@ -7,11 +7,7 @@ function Error404({ errorItems }) {
         <div className="error-404 border-b border-[#ededed] pt-[180px] pb-[180px]">
             <div className="container">
                 <div className="content flex flex-col items-center">
-                    <img
-                        src={errorItems[0]?.image}
-                        alt={errorItems[0]?.imageAlt}
-                    />
-                    <h1 className="mb-[10px]">{errorItems[0]?.title}</h1>
+                    <h1 className="mb-[10px] text-primary">{errorItems[0]?.title}</h1>
                     {errorItems[0]?.descInfo?.map((item) => (
                         <p
                             className="text-[18px] leading-[31px] mb-[45px]"
