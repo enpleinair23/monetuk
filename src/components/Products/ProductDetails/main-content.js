@@ -105,21 +105,35 @@ function MainContent({ product }) {
                             <p className="text-[14px] leading-[24px] lg:max-w-[450px]">
                                 {product?.desc}
                             </p>
-                            <div className="category-wrap flex max-xs:flex-wrap">
-                                <span className="text-black font-medium">
-                                    Size:
-                                </span>
-                                <span className="text-[#666666] ml-[5px]">
-                                    {product?.size}
-                                </span>
+                            <div
+                                className='flex flex-col mb-[5px]'
+                            >
+                                <label
+                                    htmlFor="billing-companyname"
+                                    className="text-black font-medium mb-[5px]"
+                                >
+                                    Size
+                                </label>
+                                <select
+                                    className='border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] py-[10px] px-[20px] w-full h-[50px]'
+                                >
+                                    <option>{product?.size}</option>
+                                </select>
                             </div>
-                            <div className="category-wrap flex max-xs:flex-wrap">
-                                <span className="text-black font-medium">
-                                    Colour:
-                                </span>
-                                <span className="text-[#666666] ml-[5px]">
-                                    {product?.color}
-                                </span>
+                            <div
+                                className='flex flex-col mb-[5px]'
+                            >
+                                <label
+                                    htmlFor="billing-companyname"
+                                    className="text-black font-medium mb-[5px]"
+                                >
+                                    Colour
+                                </label>
+                                <select
+                                    className='border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] py-[10px] px-[20px] w-full h-[50px]'
+                                >
+                                    <option>{product?.color}</option>
+                                </select>
                             </div>
                             <div className="group-btn flex py-[30px]">
                                 <div className={`${qtyButtonWrap} mr-[15px]`}>

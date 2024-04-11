@@ -157,8 +157,8 @@ function ProductItem({ product }) {
                                 {bestSellerSticker && (
                                     <span
                                         className={`${bestSellerSticker
-                                                ? `${bestSeller}`
-                                                : ''
+                                            ? `${bestSeller}`
+                                            : ''
                                             }`}
                                     >
                                         {bestSellerSticker}
@@ -167,8 +167,8 @@ function ProductItem({ product }) {
                                 {offerSticker && (
                                     <span
                                         className={`${offerSticker
-                                                ? `${productOffer}`
-                                                : ''
+                                            ? `${productOffer}`
+                                            : ''
                                             }`}
                                     >
                                         {offerSticker}
@@ -207,21 +207,35 @@ function ProductItem({ product }) {
                                 </span>
                             </h3>
                             <p>{desc}</p>
-                            <div className="category-wrap flex max-xs:flex-wrap">
-                                <span className="text-black font-medium">
-                                    Size:
-                                </span>
-                                <span className="text-[#666666] ml-[5px]">
-                                    {product?.size}
-                                </span>
+                            <div
+                                className='flex flex-col mb-[5px]'
+                            >
+                                <label
+                                    htmlFor="billing-companyname"
+                                    className="text-black font-medium mb-[5px]"
+                                >
+                                    Size
+                                </label>
+                                <select
+                                    className='border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] py-[10px] px-[20px] w-full h-[50px]'
+                                >
+                                    <option>{product?.size}</option>
+                                </select>
                             </div>
-                            <div className="category-wrap flex max-xs:flex-wrap">
-                                <span className="text-black font-medium">
-                                    Colour:
-                                </span>
-                                <span className="text-[#666666] ml-[5px]">
-                                    {product?.color}
-                                </span>
+                            <div
+                                className='flex flex-col mb-[5px]'
+                            >
+                                <label
+                                    htmlFor="billing-companyname"
+                                    className="text-black font-medium mb-[5px]"
+                                >
+                                    Colour
+                                </label>
+                                <select
+                                    className='border border-[#e8e8e8] focus-visible:outline-0 placeholder:text-[#7b7975] py-[10px] px-[20px] w-full h-[50px]'
+                                >
+                                    <option>{product?.color}</option>
+                                </select>
                             </div>
                             <div className="group-btn flex max-xs:flex-wrap py-[30px]">
                                 <div
@@ -277,16 +291,16 @@ function ProductItem({ product }) {
                                 </div>
                                 <div
                                     className={`${soldOutSticker
-                                            ? `cursor-not-allowed`
-                                            : ''
+                                        ? `cursor-not-allowed`
+                                        : ''
                                         }`}
                                 >
                                     <button
                                         role="button"
                                         type="button"
                                         className={`${addtoCartBtn} ${soldOutSticker
-                                                ? `pointer-events-none`
-                                                : 'hover:bg-[#666666]'
+                                            ? `pointer-events-none`
+                                            : 'hover:bg-[#666666]'
                                             } mr-[15px]`}
                                         onClick={addToCartHandler}
                                     >

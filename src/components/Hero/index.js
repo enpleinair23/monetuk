@@ -36,7 +36,7 @@ function HeroOne({ heroItems, settings }) {
 
     // Tailwind Related Stuff
     const secondaryButton =
-        'inline-flex items-center bg-primary text-white leading-[38px] text-[20px] h-[38px] px-5';
+        'inline-flex items-center bg-primary text-white leading-[38px] text-[16px] h-[38px] px-5';
 
     return (
         <div className="hero-area">
@@ -55,7 +55,7 @@ function HeroOne({ heroItems, settings }) {
                                 <div className="container">
                                     <div className="hero-content">
                                         <motion.span
-                                            className="text-primary font-medium text-[40px] block mb-[5px]"
+                                            className="text-primary font-medium text-[32px] block mb-[5px]"
                                             dangerouslySetInnerHTML={{
                                                 __html: heroItem.subtitle,
                                             }}
@@ -160,7 +160,6 @@ function HeroOne({ heroItems, settings }) {
                                                 className={secondaryButton}
                                             >
                                                 Shop Now
-                                                <IoArrowForwardOutline className="text-white ml-[5px]" />
                                             </Link>
                                         </motion.div>
                                     </div>
