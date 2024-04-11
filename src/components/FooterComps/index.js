@@ -8,7 +8,7 @@ function FooterComps({ footerContainer, footerItems }) {
             <div className="footer-bottom xl:py-[25px] lg:py-[25px] md:py-[25px] py-[25px]">
                 <div className={footerContainer}>
                     <div className="grid grid-cols-12 md:gap-y-0 gap-y-[20px] items-center">
-                        <div className="md:col-span-4 col-span-12">
+                        <div className="md:col-span-5 col-span-12">
                             <ul className="flex md:justify-start justify-center">
                                 {footerItems[0]?.menuList?.map((item) => (
                                     <li
@@ -25,7 +25,7 @@ function FooterComps({ footerContainer, footerItems }) {
                                 ))}
                             </ul>
                         </div>
-                        <div className="md:col-span-4 col-span-12">
+                        <div className="md:col-span-2 col-span-12">
                             <div className="footer-logo flex justify-center">
                                 <Link href={footerItems[0]?.footerLogoPath}>
                                     <img
@@ -37,7 +37,7 @@ function FooterComps({ footerContainer, footerItems }) {
                                 </Link>
                             </div>
                         </div>
-                        <div className="md:col-span-4 col-span-12">
+                        <div className="md:col-span-5 col-span-12">
                             <div className="social-link flex md:justify-end justify-center">
                                 <h2 className="text-[16px] lg:pr-[65px] pr-[15px]">
                                     {footerItems[0]?.socialTitle}

@@ -34,7 +34,7 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
                                     href="https://www.example.com/"
                                     className='author font-normal hover:text-primary transition-all after:text-[#999999]'
                                 >
-                                    {blog?.author}
+                                    {blog?.category}
                                 </Link>
                             </div>
                             <p className="pb-[20px]">{blog?.desc}</p>

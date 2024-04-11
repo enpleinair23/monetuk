@@ -4,7 +4,7 @@ availabilityList:
         {
             id: 'availabilityList-01',
             filterLabel: 'filter-availability-1',
-            title: 'In stock (17)',
+            title: 'In stock',
             name: 'In stock',
             checked: 'in-stock',
             key: 'in-stock',
@@ -13,7 +13,7 @@ availabilityList:
         {
             id: 'availabilityList-02',
             filterLabel: 'filter-availability-2',
-            title: 'Out of stock (2)',
+            title: 'Out of stock',
             name: 'Out of stock',
             checked: 'out-of-stock',
             key: 'out-of-stock',

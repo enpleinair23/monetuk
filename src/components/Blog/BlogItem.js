@@ -45,7 +45,7 @@ function BlogItem({ blog }) {
                         href="https://www.example.com/"
                         className='author font-normal hover:text-primary transition-all after:text-[#999999]'
                     >
-                        {blog?.author}
+                        {blog?.category}
                     </Link>
                 </div>
             </div>
