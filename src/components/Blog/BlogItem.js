@@ -11,17 +11,17 @@ function BlogItem({ blog }) {
     return (
         <div className="blog-item overflow-hidden group">
             <div className="blog-img relative">
-                <Link href={`/blogs/${blog?.slug}`} className="blog-img block">
+                <Link href={`/blog/${blog?.slug}`} className="blog-img block">
                     <img
                         className="object-cover object-center w-full"
-                        src={`/images/blogs/${blog?.slug}/${blog?.mediumImage}`}
+                        src={`/images/blog/${blog?.slug}/${blog?.mediumImage}`}
                         alt={blog?.altImage}
                         width={374}
                         height={243}
                     />
                 </Link>
                 <Link
-                    href={`/blogs/${blog?.slug}`}
+                    href={`/blog/${blog?.slug}`}
                     className="flex items-center font-normal leading-7 transition ease-in-out duration-500 bg-white absolute right-0 transform translate-x-full bottom-0 group-hover:translate-x-0 py-[5px] px-[14px]"
                 >
                     Read more
@@ -31,7 +31,7 @@ function BlogItem({ blog }) {
             <div className="blog-content pt-[25px]">
                 <h2 className="text-[20px] text-primary leading-7 ">
                     <Link
-                        href={`/blogs/${blog?.slug}`}
+                        href={`/blog/${blog?.slug}`}
                         className="relative block pb-[15px] mb-[10px] before:bg-[#cacaca] before:absolute before:left-0 before:bottom-[-3px] before:h-[1.5px] before:w-[70px]  before:transition before:ease-in-out before:duration-[800ms] after:bg-primary after:absolute after:left-0 after:bottom-[-3px] after:h-[1.5px] after:w-0 after:transform after:transition-all after:duration-500 group-hover:after:w-[70px]"
                     >
                         {blog?.title}

@@ -27,10 +27,10 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                         <Link href="/" className='hover:text-[#666666]'>
                             HOME
                         </Link>
-                        <Link href="/products/collections" className='hover:text-[#666666]'>
+                        <Link href="/shop/collections" className='hover:text-[#666666]'>
                             SHOP
                         </Link>
-                        <Link href="/blogs/home" className='hover:text-[#666666]'>
+                        <Link href="/blog/home" className='hover:text-[#666666]'>
                             BLOG
                         </Link>
                         <Link href="/about" className='hover:text-[#666666]'>

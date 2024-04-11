@@ -9,7 +9,7 @@ function PageNavigation({ prevBlog, nextBlog }) {
                 <div className="grid lm:grid-cols-2 grid-cols-1 relative text-[18px] z-[1]">
                     <div className="page-navigation-holder flex">
                         <Link
-                            href={`/blogs/${prevBlog?.slug}`}
+                            href={`/blog/${prevBlog?.slug}`}
                             className={`prev flex justify-start ${!prevBlog?.slug
                                     ? 'pointer-events-none opacity-60'
                                     : 'text-[#666666]'
@@ -25,7 +25,7 @@ function PageNavigation({ prevBlog, nextBlog }) {
                                     {prevBlog?.title}
                                 </h2>
                                 <Link
-                                    href={`/blogs/${prevBlog?.slug}`}
+                                    href={`/blog/${prevBlog?.slug}`}
                                     className={`prev text-[16px] font-normal ${!prevBlog?.slug
                                             ? 'pointer-events-none opacity-60'
                                             : 'text-[#666666]'
@@ -43,7 +43,7 @@ function PageNavigation({ prevBlog, nextBlog }) {
                                     {nextBlog?.title}
                                 </h2>
                                 <Link
-                                    href={`/blogs/${nextBlog?.slug}`}
+                                    href={`/blog/${nextBlog?.slug}`}
                                     className={`prev text-[16px] font-normal ${!nextBlog?.slug
                                             ? 'pointer-events-none opacity-60'
                                             : 'text-[#666666]'
@@ -54,7 +54,7 @@ function PageNavigation({ prevBlog, nextBlog }) {
                             </div>
                         </div>
                         <Link
-                            href={`/blogs/${nextBlog.slug}`}
+                            href={`/blog/${nextBlog.slug}`}
                             className={`prev flex justify-end ${!nextBlog?.slug
                                     ? 'pointer-events-none opacity-60'
                                     : 'text-[#666666]'

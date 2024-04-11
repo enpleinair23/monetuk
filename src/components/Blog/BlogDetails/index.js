@@ -15,7 +15,7 @@ function BlogDetail({ blog, prevBlog, nextBlog }) {
                     <div className="blog-detail-img">
                         <img
                             className="object-cover object-center w-full"
-                            src={`/images/blogs/${blog?.slug}/${blog?.extraLargeImage}`}
+                            src={`/images/blog/${blog?.slug}/${blog?.extraLargeImage}`}
                             alt={blog?.altImage}
                             width={1170}
                             height={761}

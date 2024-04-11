@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import BlogDetail from '../../components/Blogs/BlogDetails';
+import BlogDetail from '../../components/Blog/BlogDetails';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems, getItemData, getItemsFiles } from '../../lib/ItemsUtil';
 

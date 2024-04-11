@@ -4,11 +4,10 @@ import ProductThreeColumns from '../../components/Products/ProductThreeColumns';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ProductUtil';
 
-function ProductThreeColumnsPage({
+function CollectionsPage({
     headerItems,
     products,
     productFilter,
-    gridTabItems,
     footerItems,
 }) {
     return (
@@ -16,7 +15,6 @@ function ProductThreeColumnsPage({
             <HeaderOne headerItems={headerItems} headerContainer="container" />
             <ProductThreeColumns
                 products={products}
-                gridTabItems={gridTabItems}
                 productFilter={productFilter}
                 productFilterPath="3-columns"
             />
@@ -32,7 +30,6 @@ export function getStaticProps() {
     const headerItems = getAllItems('header');
     const products = getAllItems('products');
     const productFilter = getAllItems('product-filter');
-    const gridTabItems = getAllItems('grid-tab-2');
     const footerItems = getAllItems('footer');
 
     return {
@@ -40,18 +37,16 @@ export function getStaticProps() {
             headerItems,
             products,
             productFilter,
-            gridTabItems,
             footerItems,
         },
     };
 }
 
-ProductThreeColumnsPage.propTypes = {
+CollectionsPage.propTypes = {
     headerItems: PropTypes.instanceOf(Object).isRequired,
     products: PropTypes.instanceOf(Object).isRequired,
     productFilter: PropTypes.instanceOf(Object).isRequired,
-    gridTabItems: PropTypes.instanceOf(Object).isRequired,
     footerItems: PropTypes.instanceOf(Object).isRequired,
 };
 
-export default ProductThreeColumnsPage;
+export default CollectionsPage;

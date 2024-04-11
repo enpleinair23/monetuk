@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import HeaderOne from '../../components/HeaderComps';
-import BlogDefault from '../../components/Blogs/BlogDefault';
+import BlogDefault from '../../components/Blog/BlogDefault';
 import FooterComps from '../../components/FooterComps';
 import { getAllItems } from '../../lib/ItemsUtil';
 
-function BlogDefaultPage({ headerItems, blogs, footerItems }) {
+function BlogHomePage({ headerItems, blogs, footerItems }) {
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
@@ -31,10 +31,10 @@ export function getStaticProps() {
     };
 }
 
-BlogDefaultPage.propTypes = {
+BlogHomePage.propTypes = {
     headerItems: PropTypes.instanceOf(Array).isRequired,
     blogs: PropTypes.instanceOf(Array).isRequired,
     footerItems: PropTypes.instanceOf(Array).isRequired,
 };
 
-export default BlogDefaultPage;
+export default BlogHomePage;
