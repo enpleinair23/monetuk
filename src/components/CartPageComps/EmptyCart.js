@@ -10,7 +10,7 @@ function EmptyCart() {
             <p className="text-[20px]">Your cart is currently empty.</p>
             <div className="btn-wrap pt-[25px]">
                 <Link
-                    href="/products/3-columns"
+                    href="/shop/collections"
                     className="inline-flex items-center bg-black text-white h-[46px] px-[42px] transition-all hover:bg-[#222222]"
                 >
                     <IoArrowBackSharp className="mr-[5px]" />

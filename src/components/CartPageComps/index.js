@@ -224,7 +224,7 @@ function CartPageComps({ cartPageItems }) {
                             </div>
                             <div className="group-btn flex justify-between pt-[50px]">
                                 <Link
-                                    href="/products/left-sidebar"
+                                    href="/shop/collections"
                                     className="inline-flex items-center bg-black text-white h-[46px] sm:px-[42px] px-[12px] transition-all hover:bg-[#222222]"
                                 >
                                     <IoArrowBackSharp className="mr-[5px]" />

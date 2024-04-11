@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 import EmptyCheckout from './EmptyCheckout';
@@ -34,7 +34,7 @@ function Checkout({ checkoutItems }) {
     );
 
     return (
-        <div className="checkout border-b border-[#ededed] lg:py-[90px] md:py-[80px] py-[50px]">
+        <div className="checkout border-b border-[#ededed]">
             {cartItems.length <= 0 && <EmptyCheckout />}
             {cartItems.length <= 0 ||
                 (initialValue === 0 && (
@@ -47,14 +47,14 @@ function Checkout({ checkoutItems }) {
                                             <div className="icon text-green-500 mr-[10px]">
                                                 <IoCheckmarkCircle />
                                             </div>
-                                            <h2 className="title text-[16px] leading-[28px] max-sm:whitespace-nowrap max-sm:text-ellipsis overflow-hidden">
+                                            <h2 className="title text-[16px] text-primary leading-[28px] max-sm:whitespace-nowrap max-sm:text-ellipsis overflow-hidden">
                                                 {
                                                     checkoutItems[0]
                                                         ?.customerzoneTitle
                                                 }
                                                 <button
                                                     type="button"
-                                                    className="ml-[5px] transition-all hover:text-primary"
+                                                    className="ml-[5px] transition-all text-primary"
                                                     onClick={
                                                         openReturningCustomer
                                                     }
@@ -68,7 +68,7 @@ function Checkout({ checkoutItems }) {
                                         </div>
                                         {returningCustomer && (
                                             <div className="returning-form-wrap border border-[#dddddd] p-[30px] mt-[30px]">
-                                                <p className="text-[#777777] text-[16px] font-normal mb-[20px]">
+                                                <p className="text-primary text-[16px] font-normal mb-[20px]">
                                                     {
                                                         checkoutItems[0]
                                                             ?.customerzoneDesc
@@ -121,7 +121,7 @@ function Checkout({ checkoutItems }) {
                                             <div className="icon text-green-500 mr-[10px]">
                                                 <IoCheckmarkCircle />
                                             </div>
-                                            <h2 className="title text-[16px] leading-[28px] max-sm:whitespace-nowrap max-sm:text-ellipsis overflow-hidden">
+                                            <h2 className="title text-[16px] text-primary leading-[28px] max-sm:whitespace-nowrap max-sm:text-ellipsis overflow-hidden">
                                                 {
                                                     checkoutItems[0]
                                                         ?.couponZoneTitle
@@ -129,7 +129,7 @@ function Checkout({ checkoutItems }) {
 
                                                 <button
                                                     type="button"
-                                                    className="ml-[5px] transition-all hover:text-primary"
+                                                    className="ml-[5px] text-primary transition-all hover:text-primary"
                                                     onClick={openCoupon}
                                                 >
                                                     {
@@ -141,7 +141,7 @@ function Checkout({ checkoutItems }) {
                                         </div>
                                         {coupon && (
                                             <div className="returning-form-wrap border border-[#dddddd] p-[30px] mt-[30px]">
-                                                <p className="text-[#777777] text-[16px] font-normal mb-[20px]">
+                                                <p className="text-primary text-[16px] font-normal mb-[20px]">
                                                     {
                                                         checkoutItems[0]
                                                             ?.returningFormDesc
@@ -178,7 +178,7 @@ function Checkout({ checkoutItems }) {
                                 <div className="grid grid-cols-12 lg:gap-x-[25px] max-md:gap-y-[50px]">
                                     <div className="lg:col-span-7 col-span-12">
                                         <div className="billing">
-                                            <h2 className="title text-[18px] mb-[20px]">
+                                            <h2 className="title text-[18px] text-primary mb-[20px]">
                                                 Billing Details
                                             </h2>
                                             <form className="billing-form">
@@ -357,7 +357,7 @@ function Checkout({ checkoutItems }) {
                                                     />
                                                 </div>
                                                 <div className="additional-info">
-                                                    <h3 className="text-[18px] mb-[15px]">
+                                                    <h3 className="text-[18px] mb-[15px] text-primary">
                                                         Additional information
                                                     </h3>
                                                     <div
@@ -383,7 +383,7 @@ function Checkout({ checkoutItems }) {
                                     <div className="lg:col-span-5 col-span-12">
                                         <div className="order-info">
                                             <div className="inner bg-[#f6f6f6] border border-[#bfbfbf] p-[40px_45px_50px]">
-                                                <h2 className="title text-[18px] mb-[20px]">
+                                                <h2 className="title text-[18px] mb-[20px] text-primary">
                                                     Your order
                                                 </h2>
                                                 <table className="w-full text-sm text-left">
@@ -419,13 +419,13 @@ function Checkout({ checkoutItems }) {
                                                                         {
                                                                             item.name
                                                                         }{' '}
-                                                                        X
+                                                                        x{' '}
                                                                         {
                                                                             item.quantity
                                                                         }
                                                                     </th>
                                                                     <td className="py-[15px] text-right">
-                                                                        $
+                                                                        £
                                                                         {item.price.toFixed(
                                                                             2
                                                                         )}
@@ -441,7 +441,7 @@ function Checkout({ checkoutItems }) {
                                                                 Subtotal
                                                             </th>
                                                             <td className="py-[15px] text-right">
-                                                                $
+                                                                £
                                                                 {SubTotal.toFixed(
                                                                     2
                                                                 )}
@@ -455,7 +455,7 @@ function Checkout({ checkoutItems }) {
                                                                 Total
                                                             </th>
                                                             <td className="py-[15px] text-right">
-                                                                $
+                                                                £
                                                                 {SubTotal.toFixed(
                                                                     2
                                                                 )}
@@ -465,7 +465,7 @@ function Checkout({ checkoutItems }) {
                                                 </table>
                                                 <div className="check pt-[30px] border-t border-[#cdcdcd]">
                                                     <div className="payment-info pb-[20px]">
-                                                        <h2 className="text-[18px] mb-[10px]">
+                                                        <h2 className="text-[18px] mb-[10px] text-primary">
                                                             {
                                                                 checkoutItems[0]
                                                                     ?.checkTitle
@@ -479,7 +479,7 @@ function Checkout({ checkoutItems }) {
                                                         </p>
                                                     </div>
                                                     <div className="payment-info">
-                                                        <h2 className="text-[18px] mb-[10px]">
+                                                        <h2 className="text-[18px] mb-[10px] text-primary">
                                                             {
                                                                 checkoutItems[0]
                                                                     ?.paymentTitle
@@ -498,7 +498,7 @@ function Checkout({ checkoutItems }) {
                                                 {checkoutItems[0]?.additionDesc}
                                                 <Link
                                                     href="/privacy"
-                                                    className="ml-[5px]"
+                                                    className="ml-[5px] text-primary"
                                                 >
                                                     {
                                                         checkoutItems[0]
