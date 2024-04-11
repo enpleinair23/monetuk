@@ -11,8 +11,8 @@ function HomePage({
 }) {
     return (
         <>
-            <TransparentHeader headerItems={headerItems}/>
-            <HeroOne heroDefaultItems={heroDefaultItems}/>
+            <TransparentHeader headerItems={headerItems} />
+            <HeroOne heroDefaultItems={heroDefaultItems} />
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}

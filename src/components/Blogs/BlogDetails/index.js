@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { FaQuoteRight } from 'react-icons/fa';
 import PageNavigation from './PageNavigation';
 
 function BlogDetail({ blog, prevBlog, nextBlog }) {

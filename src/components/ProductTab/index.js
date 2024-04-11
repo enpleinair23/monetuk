@@ -47,11 +47,10 @@ function ProductTab({
                             {productTab[0]?.tabList?.map((item) => (
                                 <button
                                     key={item.id}
-                                    className={`${
-                                        currentFilter === item.filterValue
+                                    className={`${currentFilter === item.filterValue
                                             ? 'active'
                                             : ''
-                                    }`}
+                                        }`}
                                     type="button"
                                     onClick={onFilterHandler}
                                     data-filter={item.filterValue}

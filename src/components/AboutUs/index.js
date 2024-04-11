@@ -21,10 +21,10 @@ function AboutUs({ aboutItems }) {
             <div className="perfection">
                 <div className="container">
                     <div className="pt-[20px]">
-                            <h2 className="text-[24px] mb-[10px] text-primary">
-                                {aboutItems[0]?.perfectionTitle}
-                            </h2>
-                            <p>{aboutItems[0]?.perfectionDesc}</p>
+                        <h2 className="text-[24px] mb-[10px] text-primary">
+                            {aboutItems[0]?.perfectionTitle}
+                        </h2>
+                        <p>{aboutItems[0]?.perfectionDesc}</p>
                     </div>
                 </div>
             </div>

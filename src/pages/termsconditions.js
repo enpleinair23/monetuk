@@ -12,7 +12,7 @@ function TermsconditionsPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <TermsConditions termsconditionsItems={termsconditionsItems}/>
+            <TermsConditions termsconditionsItems={termsconditionsItems} />
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}

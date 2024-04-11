@@ -79,12 +79,11 @@ function ProductToolBars({
                             (singleGridTabList) => (
                                 <li
                                     key={singleGridTabList.id}
-                                    className={`${
-                                        tabState ===
-                                        singleGridTabList.tabStateNo
+                                    className={`${tabState ===
+                                            singleGridTabList.tabStateNo
                                             ? `${singleGridTabList.gridColumns} active opacity-100`
                                             : `${singleGridTabList.gridColumns}`
-                                    } item opacity-50 cursor-pointer transition-all hover:opacity-100 pr-[17px] last:px-0`}
+                                        } item opacity-50 cursor-pointer transition-all hover:opacity-100 pr-[17px] last:px-0`}
                                     onClick={() =>
                                         productTab(singleGridTabList.tabStateNo)
                                     }

@@ -31,28 +31,25 @@ function NewArrival({
                         >
                             <div className="product-img">
                                 <Link
-                                    href={`/products/${
-                                        products.find(
-                                            (item) =>
-                                                item.id === newArrivalItem.id
-                                        )?.slug
-                                    }`}
+                                    href={`/products/${products.find(
+                                        (item) =>
+                                            item.id === newArrivalItem.id
+                                    )?.slug
+                                        }`}
                                 >
                                     <img
                                         className="w-full"
-                                        src={`/images/products/${
-                                            products.find(
-                                                (item) =>
-                                                    item.id ===
-                                                    newArrivalItem.id
-                                            )?.slug
-                                        }/${
-                                            products.find(
+                                        src={`/images/products/${products.find(
+                                            (item) =>
+                                                item.id ===
+                                                newArrivalItem.id
+                                        )?.slug
+                                            }/${products.find(
                                                 (item) =>
                                                     item.id ===
                                                     newArrivalItem.id
                                             )?.mdImage
-                                        }`}
+                                            }`}
                                         alt={
                                             products.find(
                                                 (item) =>
@@ -68,13 +65,12 @@ function NewArrival({
                             <div className="product-content">
                                 <h3 className="mt-[15px] mb-[5px]">
                                     <Link
-                                        href={`/products/${
-                                            products.find(
-                                                (item) =>
-                                                    item.id ===
-                                                    newArrivalItem.id
-                                            )?.slug
-                                        }`}
+                                        href={`/products/${products.find(
+                                            (item) =>
+                                                item.id ===
+                                                newArrivalItem.id
+                                        )?.slug
+                                            }`}
                                         className="transition-all hover:text-primary text-[18px]"
                                     >
                                         {

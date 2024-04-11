@@ -12,7 +12,7 @@ function ReturnpolicyPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <ReturnPolicy returnpolicyItems={returnpolicyItems}/>
+            <ReturnPolicy returnpolicyItems={returnpolicyItems} />
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}

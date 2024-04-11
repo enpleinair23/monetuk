@@ -16,14 +16,12 @@ function ProductDetailTab({ product, productDetailTabItems }) {
                         (tabMenuItem) => (
                             <li
                                 key={tabMenuItem?.id}
-                                className={`${
-                                    productDetailTabState ===
-                                    tabMenuItem?.tabStateNumber
+                                className={`${productDetailTabState ===
+                                        tabMenuItem?.tabStateNumber
                                         ? `${tabMenuItem?.tabMenuItemCName} text-primary active`
                                         : `${tabMenuItem?.tabMenuItemCName}`
-                                } font-medium transition-all hover:text-primary relative flex] ${
-                                    tabMenuItem?.separatorCName
-                                }`}
+                                    } font-medium transition-all hover:text-primary relative flex] ${tabMenuItem?.separatorCName
+                                    }`}
                                 onClick={() =>
                                     productDetailTab(
                                         tabMenuItem?.tabStateNumber

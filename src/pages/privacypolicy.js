@@ -12,7 +12,7 @@ function PrivacypolicyPage({
     return (
         <>
             <HeaderOne headerItems={headerItems} headerContainer="container" />
-            <PrivacyPolicy privacypolicyItems={privacypolicyItems}/>
+            <PrivacyPolicy privacypolicyItems={privacypolicyItems} />
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}

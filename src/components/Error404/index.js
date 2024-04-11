@@ -36,7 +36,7 @@ function Error404({ errorItems }) {
                                 className="bg-transparent border border-[rgba(0,0,0,.25)] outline-none w-full p-[13px_65px_13px_15px] focus-visible:border-primary"
                             />
                             <button
-                            role="button"
+                                role="button"
                                 type="submit"
                                 className="absolute top-1/2 -translate-y-1/2 right-[20px] text-2xl"
                             >

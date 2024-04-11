@@ -23,24 +23,24 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                     </button>
                 </div>
                 <div className='pt-10'>
-                <div className="flex flex-col gap-2">
-                <Link href="/" className='hover:text-[#666666]'>
-                Home
-                </Link>
-                <Link href="/products/collections" className='hover:text-[#666666]'>
-                Shop
-                </Link>
-                <Link href="/blogs/home" className='hover:text-[#666666]'>
-                Blog
-                </Link>
-                <Link href="/about" className='hover:text-[#666666]'>
-                About
-                </Link>
-                <Link href="/contact" className='hover:text-[#666666]'>
-                Contact
-                </Link>
-                </div>
-                    <div className="offcanvas-social-link flex justify-between items-center pt-20">
+                    <div className="flex flex-col gap-2">
+                        <Link href="/" className='hover:text-[#666666]'>
+                            HOME
+                        </Link>
+                        <Link href="/products/collections" className='hover:text-[#666666]'>
+                            SHOP
+                        </Link>
+                        <Link href="/blogs/home" className='hover:text-[#666666]'>
+                            BLOG
+                        </Link>
+                        <Link href="/about" className='hover:text-[#666666]'>
+                            ABOUT
+                        </Link>
+                        <Link href="/contact" className='hover:text-[#666666]'>
+                            CONTACT
+                        </Link>
+                    </div>
+                    <div className="offcanvas-social-link flex justify-between items-center pt-10">
                         <ul className="flex">
                             {headerItems[0]?.socialList?.map((item) => {
                                 const Social = FaIcons[item.socialIcon];
@@ -61,7 +61,7 @@ function OffcanvasComps({ headerItems, offcanvas, showOffcanvas }) {
                             })}
                         </ul>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     );

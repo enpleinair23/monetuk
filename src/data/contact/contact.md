@@ -5,7 +5,7 @@ singleContactInfo:
             id: 01,
             infoIcon: 'IoStopwatchOutline',
             title: 'Opening Times',
-            desc: 'Mon – Fri : 9:00 – 18:00  <br/> Sat : 9:00 – 17:00',
+            desc: 'Mon – Fri : 9:00 – 17:00  <br/> Sat - Sun : Closed',
         },
         {
             id: 02,

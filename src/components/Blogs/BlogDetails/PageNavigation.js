@@ -10,11 +10,10 @@ function PageNavigation({ prevBlog, nextBlog }) {
                     <div className="page-navigation-holder flex">
                         <Link
                             href={`/blogs/${prevBlog?.slug}`}
-                            className={`prev flex justify-start ${
-                                !prevBlog?.slug
+                            className={`prev flex justify-start ${!prevBlog?.slug
                                     ? 'pointer-events-none opacity-60'
                                     : 'text-[#666666]'
-                            }`}
+                                }`}
                         >
                             <span className="icon flex items-center justify-center bg-[#f4f5f7] min-w-[30px] h-[70px] mr-[40px] transition-all hover:bg-primary hover:text-white">
                                 <IoChevronBackSharp />
@@ -27,11 +26,10 @@ function PageNavigation({ prevBlog, nextBlog }) {
                                 </h2>
                                 <Link
                                     href={`/blogs/${prevBlog?.slug}`}
-                                    className={`prev text-[16px] font-normal ${
-                                        !prevBlog?.slug
+                                    className={`prev text-[16px] font-normal ${!prevBlog?.slug
                                             ? 'pointer-events-none opacity-60'
                                             : 'text-[#666666]'
-                                    }`}
+                                        }`}
                                 >
                                     Previous
                                 </Link>
@@ -46,11 +44,10 @@ function PageNavigation({ prevBlog, nextBlog }) {
                                 </h2>
                                 <Link
                                     href={`/blogs/${nextBlog?.slug}`}
-                                    className={`prev text-[16px] font-normal ${
-                                        !nextBlog?.slug
+                                    className={`prev text-[16px] font-normal ${!nextBlog?.slug
                                             ? 'pointer-events-none opacity-60'
                                             : 'text-[#666666]'
-                                    }`}
+                                        }`}
                                 >
                                     Next
                                 </Link>
@@ -58,11 +55,10 @@ function PageNavigation({ prevBlog, nextBlog }) {
                         </div>
                         <Link
                             href={`/blogs/${nextBlog.slug}`}
-                            className={`prev flex justify-end ${
-                                !nextBlog?.slug
+                            className={`prev flex justify-end ${!nextBlog?.slug
                                     ? 'pointer-events-none opacity-60'
                                     : 'text-[#666666]'
-                            }`}
+                                }`}
                         >
                             <span className="icon flex items-center justify-center bg-[#f4f5f7] min-w-[30px] h-[70px] ml-[40px] transition-all hover:bg-primary hover:text-white">
                                 <IoChevronForwardSharp />

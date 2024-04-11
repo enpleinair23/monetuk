@@ -56,9 +56,8 @@ function ProductThreeColumns({
             return (
                 <li className="px-[5px]" key={number}>
                     <span
-                        className={`${
-                            currentPage === number ? 'active text-white' : 'text-black'
-                        } bg-[#f5f5f5] cursor-pointer flex items-center px-[13px] h-[34px] text-[12px] font-medium`}
+                        className={`${currentPage === number ? 'active text-white' : 'text-black'
+                            } bg-[#f5f5f5] cursor-pointer flex items-center px-[13px] h-[34px] text-[12px] font-medium`}
                         id={number}
                         onClick={handleClick}
                     >
@@ -133,9 +132,8 @@ function ProductThreeColumns({
                         <ul className="pagination flex justify-center pt-[40px]">
                             <li className="px-[5px]">
                                 <button
-                                    className={`${
-                                        currentPage === pages[0] ? 'hidden' : ''
-                                    } bg-[#f5f5f5] cursor-pointer flex items-center text-[14px] px-[13px] h-[34px]`}
+                                    className={`${currentPage === pages[0] ? 'hidden' : ''
+                                        } bg-[#f5f5f5] cursor-pointer flex items-center text-[14px] px-[13px] h-[34px]`}
                                     type="button"
                                     onClick={handlePrevbtn}
                                     disabled={currentPage === pages[0]}
@@ -148,11 +146,10 @@ function ProductThreeColumns({
                             {pageIncrementBtn}
                             <li className="px-[5px]">
                                 <button
-                                    className={`${
-                                        currentPage === pages[pages.length - 1]
+                                    className={`${currentPage === pages[pages.length - 1]
                                             ? 'hidden'
                                             : ''
-                                    } bg-[#f5f5f5] cursor-pointer flex items-center text-[14px] px-[13px] h-[34px]`}
+                                        } bg-[#f5f5f5] cursor-pointer flex items-center text-[14px] px-[13px] h-[34px]`}
                                     type="button"
                                     onClick={handleNextbtn}
                                     disabled={

@@ -52,27 +52,24 @@ function MainContent({ product }) {
                         <div className="product-detail-img relative">
                             {soldOutSticker && (
                                 <span
-                                    className={`${
-                                        soldOutSticker ? `${soldOut}` : ''
-                                    }`}
+                                    className={`${soldOutSticker ? `${soldOut}` : ''
+                                        }`}
                                 >
                                     {soldOutSticker}
                                 </span>
                             )}
                             {bestSellerSticker && (
                                 <span
-                                    className={`${
-                                        bestSellerSticker ? `${bestSeller}` : ''
-                                    }`}
+                                    className={`${bestSellerSticker ? `${bestSeller}` : ''
+                                        }`}
                                 >
                                     {bestSellerSticker}
                                 </span>
                             )}
                             {offerSticker && (
                                 <span
-                                    className={`${
-                                        offerSticker ? `${productOffer}` : ''
-                                    }`}
+                                    className={`${offerSticker ? `${productOffer}` : ''
+                                        }`}
                                 >
                                     {offerSticker}
                                 </span>
@@ -113,22 +110,22 @@ function MainContent({ product }) {
                                     Size:
                                 </span>
                                 <span className="text-[#666666] ml-[5px]">
-                                        {product?.size}
-                                    </span>
+                                    {product?.size}
+                                </span>
                             </div>
                             <div className="category-wrap flex max-xs:flex-wrap">
                                 <span className="text-black font-medium">
                                     Colour:
                                 </span>
                                 <span className="text-[#666666] ml-[5px]">
-                                        {product?.color}
-                                    </span>
+                                    {product?.color}
+                                </span>
                             </div>
                             <div className="group-btn flex py-[30px]">
                                 <div className={`${qtyButtonWrap} mr-[15px]`}>
                                     <div className="flex justify-center w-[120px]">
                                         <button
-                                        role="button"
+                                            role="button"
                                             type="button"
                                             className={`${qtybutton} dec top-1/2 -translate-y-1/2 left-[4px]`}
                                             onClick={() =>
@@ -159,7 +156,7 @@ function MainContent({ product }) {
                                             }}
                                         />
                                         <button
-                                        role="button"
+                                            role="button"
                                             type="button"
                                             className={`${qtybutton} inc top-1/2 -translate-y-1/2 right-[4px]`}
                                             onClick={() =>
@@ -175,20 +172,18 @@ function MainContent({ product }) {
                                     </div>
                                 </div>
                                 <div
-                                    className={`${
-                                        soldOutSticker
+                                    className={`${soldOutSticker
                                             ? `cursor-not-allowed`
                                             : ''
-                                    }`}
+                                        }`}
                                 >
                                     <button
-                                    role="button"
+                                        role="button"
                                         type="button"
-                                        className={`${addtoCartBtn} ${
-                                            soldOutSticker
+                                        className={`${addtoCartBtn} ${soldOutSticker
                                                 ? `pointer-events-none`
                                                 : 'hover:bg-[#666666]'
-                                        } mr-[15px]`}
+                                            } mr-[15px]`}
                                         onClick={addToCartHandler}
                                     >
                                         Add to cart

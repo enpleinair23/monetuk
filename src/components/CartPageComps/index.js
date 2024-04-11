@@ -109,7 +109,7 @@ function CartPageComps({ cartPageItems }) {
                                                     >
                                                         <div className="flex justify-center w-[120px]">
                                                             <button
-                                                            role="button"
+                                                                role="button"
                                                                 type="button"
                                                                 className={`${qtybutton} dec top-1/2 -translate-y-1/2 left-[4px]`}
                                                                 onClick={() => {
@@ -123,16 +123,16 @@ function CartPageComps({ cartPageItems }) {
                                                                                     item
                                                                                         .id
                                                                                 ] >
-                                                                                0
+                                                                                    0
                                                                                     ? prevData[
-                                                                                          item
-                                                                                              .id
-                                                                                      ] -
-                                                                                      1
+                                                                                    item
+                                                                                        .id
+                                                                                    ] -
+                                                                                    1
                                                                                     : prevData[
-                                                                                          item
-                                                                                              .id
-                                                                                      ],
+                                                                                    item
+                                                                                        .id
+                                                                                    ],
                                                                         })
                                                                     );
                                                                 }}
@@ -145,7 +145,7 @@ function CartPageComps({ cartPageItems }) {
                                                                 name="qtybutton"
                                                                 value={
                                                                     quantityCount[
-                                                                        item.id
+                                                                    item.id
                                                                     ] ||
                                                                     item.length
                                                                 }
@@ -175,7 +175,7 @@ function CartPageComps({ cartPageItems }) {
                                                                 }}
                                                             />
                                                             <button
-                                                            role="button"
+                                                                role="button"
                                                                 type="button"
                                                                 className={`${qtybutton} inc top-1/2 -translate-y-1/2 right-[4px]`}
                                                                 onClick={() => {
@@ -186,8 +186,8 @@ function CartPageComps({ cartPageItems }) {
                                                                             ...prevData,
                                                                             [item.id]:
                                                                                 prevData[
-                                                                                    item
-                                                                                        .id
+                                                                                item
+                                                                                    .id
                                                                                 ] +
                                                                                 1,
                                                                         })
@@ -205,7 +205,7 @@ function CartPageComps({ cartPageItems }) {
                                                 </td>
                                                 <td className="py-4 text-right">
                                                     <button
-                                                    role="button"
+                                                        role="button"
                                                         type="button"
                                                         className="item-remove flex items-start text-[20px]"
                                                         onClick={() =>
@@ -242,45 +242,45 @@ function CartPageComps({ cartPageItems }) {
                             </div>
                             <div className="cart-info pt-[50px]">
                                 <div className="flex justify-end">
-                                        <div className="cart-subtotal ml-auto">
-                                            <div className="border border-[#bfbfbf] bg-[#f9f9f9] px-[30px]">
-                                                <ul className="content py-[30px]">
-                                                    <li className="item flex justify-between border-b border-[#cdcdcd] pb-[16px] mb-[17px]">
-                                                        <span className="font-bold">
-                                                            Subtotal:
-                                                        </span>
-                                                        <span>
-                                                            £
-                                                            {SubTotal.toFixed(
-                                                                2
-                                                            )}
-                                                        </span>
-                                                    </li>
-                                                    <li className="item flex justify-between">
-                                                        <span className="font-bold">
-                                                            Total:
-                                                        </span>
-                                                        <span>
-                                                            £
-                                                            {SubTotal.toFixed(
-                                                                2
-                                                            )}
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="btn-wrap flex justify-center pt-[30px]">
-                                                <Link
-                                                    href="/checkout"
-                                                    className="bg-black text-white h-[46px] leading-[46px] w-full text-center px-[42px] transition-all hover:bg-[#222222]"
-                                                >
-                                                    {
-                                                        cartPageItems[0]
-                                                            ?.proceedBtnText
-                                                    }
-                                                </Link>
-                                            </div>
+                                    <div className="cart-subtotal ml-auto">
+                                        <div className="border border-[#bfbfbf] bg-[#f9f9f9] px-[30px]">
+                                            <ul className="content py-[30px]">
+                                                <li className="item flex justify-between border-b border-[#cdcdcd] pb-[16px] mb-[17px]">
+                                                    <span className="font-bold">
+                                                        Subtotal:
+                                                    </span>
+                                                    <span>
+                                                        £
+                                                        {SubTotal.toFixed(
+                                                            2
+                                                        )}
+                                                    </span>
+                                                </li>
+                                                <li className="item flex justify-between">
+                                                    <span className="font-bold">
+                                                        Total:
+                                                    </span>
+                                                    <span>
+                                                        £
+                                                        {SubTotal.toFixed(
+                                                            2
+                                                        )}
+                                                    </span>
+                                                </li>
+                                            </ul>
                                         </div>
+                                        <div className="btn-wrap flex justify-center pt-[30px]">
+                                            <Link
+                                                href="/checkout"
+                                                className="bg-black text-white h-[46px] leading-[46px] w-full text-center px-[42px] transition-all hover:bg-[#222222]"
+                                            >
+                                                {
+                                                    cartPageItems[0]
+                                                        ?.proceedBtnText
+                                                }
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </>
