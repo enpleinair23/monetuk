@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { MdPlayArrow, MdOutlineStarPurple500 } from 'react-icons/md';
+import { MdPlayArrow } from 'react-icons/md';
 
 function ProductDetailTab({ product, productDetailTabItems }) {
     // Product Detail Tab
@@ -135,81 +135,6 @@ function ProductDetailTab({ product, productDetailTabItems }) {
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                    <div
-                        className={
-                            productDetailTabState === 3
-                                ? `tab-style-common reviews active`
-                                : `tab-style-common reviews`
-                        }
-                    >
-                        <div className="reviews-wrap pt-[25px]">
-                            <h2 className="text-[26px]">
-                                {productDetailTabItems[0]?.reviewHeading}
-                            </h2>
-                            <span className="block mb-[10px]">
-                                {productDetailTabItems[0]?.reviewTitle}
-                            </span>
-                            <ul className="product-rating flex">
-                                {productDetailTabItems[0]?.ratingLists?.map(
-                                    (ratingList) => (
-                                        <li key={ratingList.id}>
-                                            <MdOutlineStarPurple500 className="text-[#f5a623]" />
-                                        </li>
-                                    )
-                                )}
-                            </ul>
-                            <form className="pt-[25px]">
-                                <div className="single-field mb-[20px]">
-                                    <label
-                                        htmlFor="your-review"
-                                        className="block mb-[5px]"
-                                    >
-                                        Your review *
-                                    </label>
-                                    <textarea
-                                        className="textarea-field border border-[#cfcfcf] outline-none w-full h-[140px] p-[10px]"
-                                        id="your-review"
-                                        type="text"
-                                    />
-                                </div>
-                                <div className="group-field flex">
-                                    <div className="single-field w-full mr-[20px]">
-                                        <label
-                                            htmlFor="reviewer-name"
-                                            className="block mb-[5px]"
-                                        >
-                                            Name *
-                                        </label>
-                                        <input
-                                            className="input-field border border-[#cfcfcf] outline-none w-full h-[40px] p-[10px]"
-                                            id="reviewer-name"
-                                            type="text"
-                                        />
-                                    </div>
-                                    <div className="single-field w-full">
-                                        <label
-                                            htmlFor="reviewer-email"
-                                            className="block mb-[5px]"
-                                        >
-                                            Email *
-                                        </label>
-                                        <input
-                                            className="input-field border border-[#cfcfcf] outline-none w-full h-[40px] p-[10px]"
-                                            id="reviewer-email"
-                                            type="email"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="submit-field mt-[35px]">
-                                    <input
-                                        type="submit"
-                                        value="submit"
-                                        className="bg-black text-white cursor-pointer capitalize p-[4px_28px]"
-                                    />
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>

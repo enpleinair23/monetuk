@@ -13,7 +13,8 @@ availability: 'In Stock'
 size: '9-13'
 color: 'White'
 isFeatured: true
-
+descriptionTitle: 'Description3'
+descriptionExcerpt: '3Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum omnis voluptas assumenda.'
 
 soldOutSticker: ''
 discountPrice: 
