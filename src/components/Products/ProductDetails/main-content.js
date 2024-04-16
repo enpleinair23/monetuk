@@ -19,7 +19,6 @@ function MainContent({ product }) {
         price,
         size,
         color,
-        descriptionTitle,
         discountPrice,
         totalPrice,
         soldOutSticker,

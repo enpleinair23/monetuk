@@ -62,7 +62,7 @@ function CartPageComps({ cartPageItems }) {
                     (initialValue === 0 && (
                         <>
                             <div className="relative overflow-x-auto">
-                                <table className="cart-table w-full text-sm text-left">
+                                <table className="cart-table border border-black w-full text-sm text-left">
                                     <thead className="text-[18px]">
                                         <tr>
                                             {cartPageItems[0]?.cartThList?.map(

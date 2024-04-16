@@ -4,8 +4,7 @@ DescriptionOne: 'We accept returns for unworn, unwashed, and undamaged products 
 To be eligible for a return, the product must be in its original condition, with all tags attached and in its original packaging.'
 
 TitleTwo: 'Initiating a Return'
-DescriptionTwo: 'To initiate a return, please contact our customer service team at contact@monetuk.com to request a Return Authorization (RA) number.
-Clearly mark the RA number on the outside of the package when returning the item.'
+DescriptionTwo: 'To initiate a return, please contact our customer service team at contact@monetuk.com to request a Return Authorization (RA) number. Please quote the order number in the subject line. Clearly mark the RA number on the outside of the package when returning the item.'
 
 TitleThree: 'Return Shipping'
 DescriptionThree: 'Customers are responsible for the cost of return shipping unless the return is due to an error on our part (e.g., wrong item shipped, defective product).

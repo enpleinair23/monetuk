@@ -1,9 +1,9 @@
 ---
 id: 'blog-01'
 title: 'COLLECTION 1'
-singleImgOne: '1146x745.jpg'
-singleImgTwo: '1146x745.jpg'
-singleImgAlt: 'Single Image'
+singleImgOne: ''
+singleImgTwo: ''
+singleImgAlt: ''
 mediumImage: '374x243.jpg'
 extraLargeImage: '1146x745.jpg'
 altImage: 'Collection 1'
