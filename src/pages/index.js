@@ -13,6 +13,7 @@ function HomePage({
         <>
             <TransparentHeader headerItems={headerItems} />
             <HeroOne heroItems={heroItems} />
+            <p>dhfdhdhh</p>
             <FooterComps
                 footerContainer="container"
                 footerItems={footerItems}
