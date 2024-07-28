@@ -1,40 +1,40 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-
-export function getItemsFiles(type) {
-    const itemsDirectory = path.join(process.cwd(), 'src/data', type);
-    return fs.readdirSync(itemsDirectory);
-}
-
-export function getItemData(itemIdentifier, type) {
-    const itemsDirectory = path.join(`${process.cwd()}/src/data/${type}`);
-    const itemSlug = itemIdentifier.replace(/\.md$/, ''); // removes the file extension
-    const filePath = path.join(itemsDirectory, `${itemSlug}.md`);
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const { data, content } = matter(fileContent);
-
-    const itemData = {
-        slug: itemSlug,
-        ...data,
-        content,
-    };
-
-    return itemData;
-}
-
-export function getAllItems(type) {
-    const itemFiles = getItemsFiles(type);
-
-    const allItems = itemFiles.map((itemFile) => getItemData(itemFile, type));
-
-    const sortedItems = allItems.sort((itemA, itemB) =>
-        itemA.date > itemB.date ? -1 : 1
-    );
-
-    return sortedItems;
-}
-
-export function getFeaturedItems(items) {
-    return items.filter((item) => item.isFeatured);
-}
+// Sample product data
+const products = [
+    {
+      id: "prod_QEnqbhCdKpea8Z",
+      name: "Box Logo Hoodie",
+      description: "Crafted from heavyweight, ultra-soft cotton blend fabric.",
+      images: [
+        "https://files.stripe.com/links/MDB8YWNjdF8xUDQ4eGFKSUw2MUIzbzVFfGZsX3Rlc3RfZ3hGeFBMQ2dVZE1SYm42NnU4RDU3MDN200h74eEFZ2",
+      ],
+      default_price: "$50.00",
+      active: true,
+      created: 1717595478,
+    },
+    {
+      id: "prod_QEnqC2cHcnvTWw",
+      name: "Box Logo T-Shirt",
+      description: "Crafted from heavyweight, ultra-soft cotton blend fabric.",
+      images: [
+        "https://files.stripe.com/links/MDB8YWNjdF8xUDQ4eGFKSUw2MUIzbzVFfGZsX3Rlc3RfWEdyWkZXSk42WFloTjFqdnhKa2dTZmlU00qxLkbE54",
+      ],
+      default_price: "$25.00",
+      active: true,
+      created: 1717595423,
+    },
+    // Add more products as needed
+  ];
+  
+  // Function to get all products
+  export const getAllProducts = () => {
+    return products;
+  };
+  
+  // Function to get a product by ID
+  export const getProductById = (id) => {
+    return products.find((product) => product.id === id);
+  };
+  
+  // Additional utility functions can be added here
+  // e.g., filtering products by category, search, etc.
+  

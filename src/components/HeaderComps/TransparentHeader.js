@@ -1,51 +1,61 @@
-import { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import LogoComps from '../LogoComps';
-import HeaderRight from './HeaderRightSide';
+import { useEffect, useRef } from "react";
+import Image from "next/image"; // Import the Image component
+import Link from "next/link";
+import { IoMenuOutline, IoBagHandleOutline } from "react-icons/io5";
 
-function TransparentHeader({ headerItems }) {
-    const header = useRef();
-    useEffect(() => {
-        window.addEventListener('scroll', isSticky);
+function TransparentHeader() {
+  const header = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
 
-        return () => {
-            window.removeEventListener('scroll', isSticky);
-        };
-    }, []);
-
-    const isSticky = (e) => {
-        const scrollTop = window.scrollY;
-
-        scrollTop >= 90
-            ? header.current?.classList.add('is-sticky')
-            : header.current?.classList.remove('is-sticky');
+    return () => {
+      window.removeEventListener("scroll", isSticky);
     };
+  }, []);
 
-    return (
-        <header
-            ref={header}
-            className="flex items-center px-[20px] h-[90px] w-full absolute top-0 z-30"
-        >
-            <div className="container">
-                <div className="flex justify-between">
-                    <div className="">
-                        <LogoComps
-                            headerItems={headerItems}
-                            headerLogoCName="flex md:justify-center"
-                            logoPath="/"
-                        />
-                    </div>
-                    <div className="">
-                        <HeaderRight headerItems={headerItems} />
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+  const isSticky = (e) => {
+    const scrollTop = window.scrollY;
+
+    scrollTop >= 90
+      ? header.current?.classList.add("is-sticky")
+      : header.current?.classList.remove("is-sticky");
+  };
+
+  return (
+    <div className="flex items-center px-[20px] h-[90px] w-full absolute top-0 z-30">
+      <div className="container">
+        <div className="flex justify-between">
+          <div className="">
+            <Link href="/">
+              <Image
+                src="/darklogo.png" // Path to your image in the public folder
+                alt="Logo"
+                width={150} // Specify width
+                height={50} // Specify height
+              />
+            </Link>
+          </div>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              className="text-2xl relative group hover:text-[#a9aaa9] transition-all"
+              onClick=""
+            >
+              <IoBagHandleOutline />
+            </button>
+            <button
+              role="button"
+              type="button"
+              className="text-2xl hover:text-[#a9aaa9] transition-all"
+              onClick=""
+            >
+              <IoMenuOutline />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-TransparentHeader.propTypes = {
-    headerItems: PropTypes.instanceOf(Object).isRequired,
-};
 
 export default TransparentHeader;
