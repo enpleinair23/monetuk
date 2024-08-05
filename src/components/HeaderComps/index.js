@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Image from "next/image"; // Import the Image component
 import Link from "next/link";
 import { IoMenuOutline, IoBagHandleOutline } from "react-icons/io5";
 
@@ -27,7 +26,7 @@ function Header() {
         <div className="flex justify-between">
           <div className="">
             <Link href="/">
-              <Image
+              <img
                 src="/darklogo.png" // Path to your image in the public folder
                 alt="Logo"
                 width={150} // Specify width

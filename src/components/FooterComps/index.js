@@ -1,4 +1,3 @@
-import Image from "next/image"; // Import the Image component
 import Link from "next/link";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
@@ -39,7 +38,7 @@ function FooterComps() {
             <div className="md:col-span-2 col-span-12">
               <div className="footer-logo flex justify-center">
                 <Link href="/">
-                  <Image
+                  <img
                     src="/darklogo.png" // Path to your image in the public folder
                     alt="Logo"
                     width={150} // Specify width
