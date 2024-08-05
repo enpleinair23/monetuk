@@ -52,7 +52,7 @@ function FooterComps() {
               <ul className="flex md:justify-end justify-center gap-8">
                 <Link
                   href="https://www.instagram.com/monetu.k/"
-                  className="font-normal transition-all hover:text-[#666666]"
+                  className="font-normal hover:text-[#666666]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -60,7 +60,7 @@ function FooterComps() {
                 </Link>
                 <Link
                   href="https://twitter.com/MonetK88651"
-                  className="font-normal transition-all hover:text-[#666666]"
+                  className="font-normal hover:text-[#666666]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -68,7 +68,7 @@ function FooterComps() {
                 </Link>
                 <Link
                   href="https://www.youtube.com/@MONETUK"
-                  className="font-normal transition-all hover:text-[#666666]"
+                  className="font-normal hover:text-[#666666]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -6,7 +6,6 @@ import { persistStore } from 'redux-persist';
 import store from '../store/index';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
-import { ScrollToTop } from '../components/ScrollComps';
 
 const persistor = persistStore(store);
 
@@ -21,7 +20,7 @@ function MyApp({ Component, pageProps }) {
                 <title>MONET U.K</title>
                 <meta
                     name="description"
-                    content="Are you looking for an awesome E-commerce React Template? Helendo is a minimal and modern design React ecommerce template. It has been built using the latest version of React JS and Next JS."
+                    content="AUTUMN/WINTER 2024"
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
             </Head>
@@ -30,7 +29,6 @@ function MyApp({ Component, pageProps }) {
                     <Component {...pageProps} />
                 </PersistGate>
             </Provider>
-            <ScrollToTop />
         </Layout>
     );
 }

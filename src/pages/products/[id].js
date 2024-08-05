@@ -24,14 +24,14 @@ const ProductPage = ({ product }) => {
   return (
     <>
       <Header />
-      <div className="container mx-auto px-4 pb-4">
+      <div className="container border-b border-[#ededed] mx-auto px-8 pb-[40px]">
         {/* Back Button */}
         <button
           onClick={handleBack}
           className="mb-4 text-black hover:text-gray-500 transition duration-300 flex items-center"
         >
           <svg
-            className="w-4 h-4 mr-2"
+            className="w-4 h-4 mr-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
