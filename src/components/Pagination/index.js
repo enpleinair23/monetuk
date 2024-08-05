@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Pagination({ totalPages, currentPage, onPageChange }) {
   // Helper function to create an array of page numbers
@@ -12,12 +12,16 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
   };
 
   return (
-    <div className="flex justify-center my-4 gap-4">
+    <div className="flex justify-center mt-8">
       {/* Previous button */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="pagination-button"
+        className={`px-4 py-2 mx-1 rounded-md border border-gray-300 ${
+          currentPage === 1
+            ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+            : "bg-white text-gray-700 hover:bg-gray-100"
+        }`}
       >
         Previous
       </button>
@@ -27,8 +31,10 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`pagination-button ${
-            page === currentPage ? 'active' : ''
+          className={`px-4 py-2 mx-1 rounded-md border ${
+            page === currentPage
+              ? "bg-black text-white border-black"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
           }`}
         >
           {page}
@@ -39,7 +45,11 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="pagination-button"
+        className={`px-4 py-2 mx-1 rounded-md border border-gray-300 ${
+          currentPage === totalPages
+            ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+            : "bg-white text-gray-700 hover:bg-gray-100"
+        }`}
       >
         Next
       </button>

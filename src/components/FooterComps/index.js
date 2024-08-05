@@ -3,10 +3,8 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import {
-  faFacebook,
   faTwitter,
   faInstagram,
-  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"; // Import specific icons
 import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
 
@@ -53,7 +51,7 @@ function FooterComps() {
             <div className="md:col-span-5 col-span-12 px-8">
               <ul className="flex md:justify-end justify-center gap-8">
                 <Link
-                  href="https://www.instagram.com/monetuk3/"
+                  href="https://www.instagram.com/monetu.k/"
                   className="font-normal transition-all hover:text-[#666666]"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -57,7 +57,6 @@ const products = [
     updated: 1717597741,
     url: null,
   },
-
   // More product data here
 ];
 
@@ -99,6 +98,9 @@ function CollectionsPage() {
                 <h3 className="transition-all hover:text-primary text-[16px] text-primary text-center">
                   {product.name}
                 </h3>
+                <p className="transition-all hover:text-primary text-[16px] text-primary text-center">
+                  {product.default_price}
+                </p>
               </Link>
             </div>
           ))}
