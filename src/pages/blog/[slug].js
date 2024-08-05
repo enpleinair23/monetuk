@@ -1,24 +1,19 @@
 import PropTypes from 'prop-types';
-import HeaderOne from '../../components/HeaderComps';
+import Header from '../../components/HeaderComps';
 import BlogDetail from '../../components/Blog/BlogDetails';
-import FooterComps from '../../components/FooterComps';
+import Footer from '../../components/FooterComps';
 import { getAllItems, getItemData, getItemsFiles } from '../../lib/ItemsUtil';
 
 function BlogDetailPage({
     blog,
-    headerItems,
-    footerItems,
     prevBlog,
     nextBlog,
 }) {
     return (
         <>
-            <HeaderOne headerItems={headerItems} headerContainer="container" />
+            <Header/>
             <BlogDetail blog={blog} prevBlog={prevBlog} nextBlog={nextBlog} />
-            <FooterComps
-                footerContainer="container"
-                footerItems={footerItems}
-            />
+            <Footer/>
         </>
     );
 }
@@ -27,7 +22,6 @@ export function getStaticProps(context) {
     const { params } = context;
     const { slug } = params;
 
-    const headerItems = getAllItems('header');
     const blog = getItemData(slug, 'blogs');
     const blogs = getAllItems('blogs');
     const currentBlogIndex = blogs.findIndex((blog) => blog.slug === slug);
@@ -37,14 +31,11 @@ export function getStaticProps(context) {
     const prevBlog = blogs[currentBlogIndex - 1]
         ? blogs[currentBlogIndex - 1]
         : {};
-    const footerItems = getAllItems('footer');
     return {
         props: {
-            headerItems,
             blog,
             prevBlog,
             nextBlog,
-            footerItems,
         },
     };
 }
@@ -63,11 +54,9 @@ export function getStaticPaths() {
 }
 
 BlogDetailPage.propTypes = {
-    headerItems: PropTypes.instanceOf(Object).isRequired,
     blog: PropTypes.instanceOf(Object).isRequired,
     prevBlog: PropTypes.instanceOf(Object).isRequired,
     nextBlog: PropTypes.instanceOf(Object).isRequired,
-    footerItems: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default BlogDetailPage;
