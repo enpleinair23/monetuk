@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { IoBagHandleOutline } from "react-icons/io5";
 import HamburgerMenu from "../HamburgerMenu";
 import CartMenu from "../CartMenu";
 

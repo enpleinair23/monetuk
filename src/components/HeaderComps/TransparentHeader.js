@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { IoBagHandleOutline } from "react-icons/io5";
 import HamburgerMenu from "../HamburgerMenu";
+import CartMenu from "../CartMenu";
 
 function TransparentHeader() {
   const header = useRef();
