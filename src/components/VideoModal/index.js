@@ -15,7 +15,7 @@ function VideoModal() {
     };
     return (
         <button type="button" onClick={openModal}>
-            <IoPlayCircleOutline className="text-[80px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
+            <IoPlayCircleOutline className="text-[80px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             {modal && (
                 <div className="fixed top-0 left-0 w-full h-full bg-[rgba(28,_28,_28,_0.19)] backdrop-blur-[6px] opacity-100 ease-out duration-300 z-[100]">
                     <div className="flex justify-center items-center h-screen">

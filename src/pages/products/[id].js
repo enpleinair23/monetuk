@@ -24,11 +24,11 @@ const ProductPage = ({ product }) => {
   return (
     <>
       <Header />
-      <div className="container border-b border-[#ededed] mx-auto px-8 pb-[40px]">
+      <div className="container mx-auto px-8 mb-8">
         {/* Back Button */}
         <button
           onClick={handleBack}
-          className="mb-4 text-black hover:text-gray-500 transition duration-300 flex items-center"
+          className="mb-4 text-black font-bold hover:text-gray-500 transition duration-300 flex items-center"
         >
           <svg
             className="w-4 h-4 mr-1"

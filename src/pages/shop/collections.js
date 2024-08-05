@@ -10,7 +10,7 @@ function CollectionsPage() {
   const products = getAllProducts();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 9;
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
   // Determine the products to display on the current page

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import Image from "next/image"; // Import the Image component
 import Link from "next/link";
-import { IoMenuOutline, IoBagHandleOutline } from "react-icons/io5";
+import { IoBagHandleOutline } from "react-icons/io5";
+import HamburgerMenu from "../HamburgerMenu";
 
 function TransparentHeader() {
   const header = useRef();
@@ -27,7 +27,7 @@ function TransparentHeader() {
         <div className="flex justify-between">
           <div className="">
             <Link href="/">
-              <Image
+              <img
                 src="/darklogo.png" // Path to your image in the public folder
                 alt="Logo"
                 width={150} // Specify width
@@ -35,22 +35,9 @@ function TransparentHeader() {
               />
             </Link>
           </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              className="text-2xl relative group hover:text-[#a9aaa9] transition-all"
-              onClick=""
-            >
-              <IoBagHandleOutline />
-            </button>
-            <button
-              role="button"
-              type="button"
-              className="text-2xl hover:text-[#a9aaa9] transition-all"
-              onClick=""
-            >
-              <IoMenuOutline />
-            </button>
+          <div className="flex gap-1">
+            <CartMenu />
+            <HamburgerMenu />
           </div>
         </div>
       </div>
