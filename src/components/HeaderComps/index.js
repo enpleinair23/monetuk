@@ -1,8 +1,15 @@
 import Link from "next/link";
 import HamburgerMenu from "../HamburgerMenu";
 import CartMenu from "../CartMenu";
+import { CartProvider } from "../../context/CartContext";
+import { useState } from 'react';
 
 function Header() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
+  const closeCart = () => setIsCartOpen(false);
+
   return (
     <div className="flex items-center px-[20px] h-[90px] w-full top-0 z-30 bg-white">
       <div className="container">
@@ -18,7 +25,6 @@ function Header() {
             </Link>
           </div>
           <div className="flex gap-1">
-            <CartMenu/>
             <HamburgerMenu />
           </div>
         </div>

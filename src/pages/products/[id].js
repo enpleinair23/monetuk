@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Header from "../../components/HeaderComps";
 import Footer from "../../components/FooterComps";
 import { getProductById, getAllProducts } from "../../lib/ProductUtil";
 import SizeSelector from "../../components/SizeSelector";
 import { useRouter } from "next/router";
+import { useCart } from "../../context/CartContext";
+import CartMenu from "../../components/CartMenu";
 
 const ProductPage = ({ product }) => {
+  const router = useRouter();
+  const { addToCart } = useCart();
+  const [cartOpen, setCartOpen] = useState(false);
+
   if (!product) {
     return <p>Product not found!</p>;
   }
-
-  const router = useRouter();
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -21,10 +25,15 @@ const ProductPage = ({ product }) => {
     router.back(); // Navigate back to the previous page
   };
 
+  const handleAddToCart = () => {
+    addToCart(product);
+    setCartOpen(true); // Open the cart menu
+  };
+
   return (
     <>
       <Header />
-      <div className="container mx-auto px-8 mb-8">
+      <div className="container product border-b border-[#ededed] mx-auto pb-[40px]">
         {/* Back Button */}
         <button
           onClick={handleBack}
@@ -62,7 +71,7 @@ const ProductPage = ({ product }) => {
               {product.name}
             </h1>
             <p className="text-lg text-black mb-2">{product.description}</p>
-            <div className="flex items-center">
+            <div className="flex items-center mb-4">
               <span className="text-2xl font-bold text-black mr-2">
                 {product.default_price}
               </span>
@@ -76,16 +85,20 @@ const ProductPage = ({ product }) => {
                 </span>
               )}
             </div>
-            <div>
+            <div className="mb-4">
               <SizeSelector sizes={["S", "M", "L", "XL"]} />
             </div>
-            <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition duration-300">
+            <button
+              onClick={handleAddToCart}
+              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition duration-300"
+            >
               Add to Cart
             </button>
           </div>
         </div>
       </div>
 
+      <CartMenu isOpen={cartOpen} onClose={() => setCartOpen(false)} />
       <Footer />
     </>
   );
@@ -118,6 +131,7 @@ ProductPage.propTypes = {
     description: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string),
     default_price: PropTypes.string,
+    active: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

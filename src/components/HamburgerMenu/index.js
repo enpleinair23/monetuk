@@ -41,7 +41,7 @@ export default function HamburgerMenu() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-2">
+        <div className="flex justify-between items-center px-4 h-[90px] w-full top-0">
           <div>
             <Link href="/">
               <img
@@ -54,7 +54,7 @@ export default function HamburgerMenu() {
           </div>
           {/* Close Button */}
           <div>
-            <button className=" text-gray-700 mt-4" onClick={toggleMenu}>
+            <button className="text-gray-700 mt-2 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 hover:bg-gray-200 transition duration-150" onClick={toggleMenu}>
               <svg
                 className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function HamburgerMenu() {
             HOME
           </Link>
           <Link
-            href="/about"
+            href="/shop/collections"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-150"
           >
             SHOP
