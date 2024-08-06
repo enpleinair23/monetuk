@@ -21,6 +21,7 @@ function Header() {
                 alt="Logo"
                 width={150} // Specify width
                 height={50} // Specify height
+                className="hover:opacity-75 opacity-75"
               />
             </Link>
           </div>

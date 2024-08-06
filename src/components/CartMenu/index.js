@@ -1,10 +1,14 @@
-// src/components/CartMenu.js
-
 import React from "react";
 import { useCart } from "../../context/CartContext";
+import Link from 'next/link';
 
 const CartMenu = ({ isOpen, onClose }) => {
   const { cart, removeFromCart } = useCart();
+
+  const totalAmount = cart.items.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   return (
     <div
@@ -16,7 +20,7 @@ const CartMenu = ({ isOpen, onClose }) => {
         <h2 className="text-xl text-black font-bold">Shopping Cart</h2>
         <button
           onClick={onClose}
-          className="text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 hover:bg-gray-200 transition duration-150"
+          className="text-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 hover:bg-gray-200 transition duration-150"
         >
           <svg
             className={`w-6 h-6 transition-transform transform ${
@@ -70,6 +74,18 @@ const CartMenu = ({ isOpen, onClose }) => {
             ))}
           </ul>
         )}
+      </div>
+      <div className="mt-auto border-t pt-4">
+        <h3 className="text-lg font-medium">
+          Total: 
+        </h3>
+        <Link
+          href="/checkout"
+          className="block w-full mt-4 bg-blue-500 text-white text-center py-2 rounded-md hover:bg-blue-600 transition duration-150"
+          onClick={onClose} // Close the cart when going to checkout
+        >
+          Checkout
+        </Link>
       </div>
     </div>
   );
