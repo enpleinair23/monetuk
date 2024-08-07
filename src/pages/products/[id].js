@@ -32,7 +32,10 @@ const ProductPage = ({ product }) => {
 
   return (
     <>
+      {/* Header */}
       <Header />
+
+      {/* Page Container */}
       <div className="container product border-b border-[#ededed] mx-auto pb-[40px]">
         {/* Back Button */}
         <button
@@ -55,6 +58,8 @@ const ProductPage = ({ product }) => {
           </svg>
           Back
         </button>
+
+        {/* Product Card */}
         <div className="gap-8">
           {/* Product Image */}
           <div className="flex justify-center">
@@ -98,7 +103,10 @@ const ProductPage = ({ product }) => {
         </div>
       </div>
 
+      {/* Cart Menu */}
       <CartMenu isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+
+      {/* Footer */}
       <Footer />
     </>
   );

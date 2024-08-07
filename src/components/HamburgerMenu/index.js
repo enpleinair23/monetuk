@@ -74,7 +74,7 @@ export default function HamburgerMenu() {
         </div>
 
         {/* Navigation Links */}
-        <div className="mt-16 space-y-4">
+        <div className="px-4 space-y-4">
           <Link
             href="/"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-150"

@@ -81,7 +81,7 @@ const CartMenu = ({ isOpen, onClose }) => {
         </h3>
         <Link
           href="/checkout"
-          className="block w-full mt-4 bg-blue-500 text-white text-center py-2 rounded-md hover:bg-blue-600 transition duration-150"
+          className="block w-full mt-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition duration-300"
           onClick={onClose} // Close the cart when going to checkout
         >
           Checkout
