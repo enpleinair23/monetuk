@@ -36,7 +36,7 @@ const ProductPage = ({ product }) => {
       <Header />
 
       {/* Page Container */}
-      <div className="container product border-b border-[#ededed] mx-auto pb-[40px]">
+      <div className="container product border-b border-[#ededed] mx-auto pb-[40px] px-[40px]">
         {/* Back Button */}
         <button
           onClick={handleBack}
