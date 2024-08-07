@@ -44,11 +44,11 @@ const CheckoutPage = () => {
 
       {/* Page Container */}
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Checkout</h1>
+        <h1 className="text-3xl text-black font-bold mb-6">Checkout</h1>
         <div className="flex flex-col lg:flex-row">
           {/* Cart Details */}
           <div className="lg:w-1/2 lg:pr-4">
-            <h2 className="text-xl font-semibold mb-4">Cart Summary</h2>
+            <h2 className="text-xl text-black  font-semibold mb-4">Cart Summary</h2>
             <ul>
               {cart.items.length === 0 ? (
                 <p>Your cart is empty.</p>
@@ -66,8 +66,8 @@ const CheckoutPage = () => {
                 ))
               )}
             </ul>
-            <div className="mt-4 border-t pt-4">
-              <h3 className="text-lg font-medium">
+            <div className="mt-4 border-t pt-4 text-black ">
+              <h3 className="text-lg font-medium text-black ">
                 Total: ${totalAmount.toFixed(2)}
               </h3>
             </div>
@@ -75,7 +75,7 @@ const CheckoutPage = () => {
 
           {/* Checkout Form */}
           <div className="lg:w-1/2 lg:pl-4 mt-8 lg:mt-0">
-            <h2 className="text-xl font-semibold mb-4">Shipping Information</h2>
+            <h2 className="text-xl font-semibold text-black mb-4">Shipping Information</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
